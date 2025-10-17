@@ -39,7 +39,7 @@ export const HeroSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          A new wave of live content is coming from Africa — built by creators, for creators.
+          A new wave of live content is coming from Kenya — built by creators, for creators.
         </p>
 
         {/* CTA Buttons */}

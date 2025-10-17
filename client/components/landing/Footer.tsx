@@ -71,7 +71,7 @@ export const Footer = () => {
               © 2025 Hili. Made with pride in Kenya.
             </p>
             <p className="text-xs text-muted-foreground/70">
-              A project by emerging African innovators.
+              A project by emerging Kenyan innovators.
             </p>
           </div>
         </div>

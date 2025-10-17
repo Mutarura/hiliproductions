@@ -38,7 +38,7 @@ export const VisionSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            We're building a home for creators, dreamers, gamers, and storytellers across Africa.
+            We're building a home for creators, dreamers, gamers, and storytellers across Kenya.
           </p>
 
           {/* Animated divider line */}
