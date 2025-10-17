@@ -49,7 +49,7 @@ export const HeroSection = () => {
           }`}
         >
           <a
-            href="https://forms.gle/viewer-form"
+            href="https://forms.gle/FR3gKdKcvALNUxiu5"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
@@ -57,7 +57,7 @@ export const HeroSection = () => {
             I'm a Viewer
           </a>
           <a
-            href="https://forms.gle/creator-form"
+            href="https://forms.gle/9fyvancYqXQg8i2XA"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-all duration-300"
