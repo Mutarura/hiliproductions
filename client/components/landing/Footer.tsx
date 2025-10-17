@@ -68,7 +68,10 @@ export const Footer = () => {
           {/* Copyright and attribution */}
           <div className="text-center space-y-2">
             <p className="text-sm text-muted-foreground">
-              © 2025 Hili. Made with pride in Kenya.
+              © 2025 Hili. Made with ❤️ in Kenya.
+            </p>
+            <p className="text-sm text-primary font-semibold">
+              Something Kenyan is coming!
             </p>
             <p className="text-xs text-muted-foreground/70">
               A project by emerging Kenyan innovators.
