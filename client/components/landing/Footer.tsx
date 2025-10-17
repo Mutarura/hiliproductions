@@ -73,8 +73,8 @@ export const Footer = () => {
             <p className="text-sm text-primary font-semibold">
               Something Kenyan is coming!
             </p>
-            <p className="text-xs text-muted-foreground/70">
-              A project by emerging Kenyan innovators.
+            <p className="text-sm text-primary font-semibold">
+              #HiliNdioPlatform 🚀
             </p>
           </div>
         </div>
