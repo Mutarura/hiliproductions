@@ -53,7 +53,7 @@ export const Footer = () => {
           {/* CTA */}
           <div className="flex flex-col items-center sm:items-end gap-2">
             <a
-              href="https://forms.gle/early-access"
+              href="https://forms.gle/FR3gKdKcvALNUxiu5"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold text-primary hover:text-secondary transition-colors duration-300"
