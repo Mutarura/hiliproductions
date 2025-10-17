@@ -54,7 +54,7 @@ export const HeroSection = () => {
             rel="noopener noreferrer"
             className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
           >
-            Join the Early Access List
+            I'm a Viewer
           </a>
           <a
             href="https://forms.gle/creator-form"
@@ -62,7 +62,7 @@ export const HeroSection = () => {
             rel="noopener noreferrer"
             className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-all duration-300"
           >
-            Become a Creator
+            I'm a Creator
           </a>
         </div>
 

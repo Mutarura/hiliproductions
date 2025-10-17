@@ -8,7 +8,7 @@ const features = [
   },
   {
     title: "Earn With Fans",
-    description: "Direct support using Sava Coins.",
+    description: "Direct support using Hili Coins.",
     icon: "💰",
   },
   {
