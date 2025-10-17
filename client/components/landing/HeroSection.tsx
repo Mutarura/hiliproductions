@@ -52,7 +52,7 @@ export const HeroSection = () => {
             href="https://forms.gle/FR3gKdKcvALNUxiu5"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+            className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
           >
             I'm a Viewer
           </a>
@@ -60,7 +60,7 @@ export const HeroSection = () => {
             href="https://forms.gle/9fyvancYqXQg8i2XA"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-all duration-300"
+            className="px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-105"
           >
             I'm a Creator
           </a>
