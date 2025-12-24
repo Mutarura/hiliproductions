@@ -62,7 +62,7 @@ export const HeroSection = () => {
             rel="noopener noreferrer"
             className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
           >
-            I'm a Viewer
+            Explore Hili
           </a>
           <a
             href="https://forms.gle/9fyvancYqXQg8i2XA"
@@ -70,7 +70,7 @@ export const HeroSection = () => {
             rel="noopener noreferrer"
             className="px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-105"
           >
-            I'm a Creator
+            Join the Community
           </a>
         </div>
 
