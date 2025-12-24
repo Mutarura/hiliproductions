@@ -28,18 +28,26 @@ export const HeroSection = () => {
           }`}
         >
           <span className="gradient-text">Hili</span>
-          <span className="text-foreground"> — The Stream. </span>
           <br className="hidden sm:block" />
-          <span className="text-foreground">The Story. The Revolution.</span>
+          <span className="text-foreground">Culture-Led Digital Productions & Live Media</span>
         </h1>
 
         {/* Subheading */}
         <p
-          className={`text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 transition-all duration-1000 delay-200 ${
+          className={`text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 transition-all duration-1000 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          A new wave of live content is coming from Kenya — built by creators, for creators.
+          Built for Africa. Built for Creators. Built for the People.
+        </p>
+
+        {/* Description */}
+        <p
+          className={`text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 transition-all duration-1000 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          Hili is a people-first digital productions company creating creator-led shows, live streams, and culturally rooted digital experiences — bringing African culture to life online.
         </p>
 
         {/* CTA Buttons */}
