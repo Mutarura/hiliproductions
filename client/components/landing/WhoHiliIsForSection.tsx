@@ -96,49 +96,49 @@ export const WhoHiliIsForSection = () => {
                 <div className={`absolute -inset-1 rounded-3xl bg-gradient-to-br ${audience.iconGradient} opacity-0 group-hover:opacity-40 blur-2xl group-hover:blur-3xl transition-all duration-500 -z-10`}></div>
 
                 {/* Main card */}
-                <div className={`relative h-full rounded-2xl bg-gradient-to-br ${audience.gradient} border border-primary/20 group-hover:border-primary/50 transition-all duration-300 overflow-hidden`}>
+                <div className={`relative h-full rounded-xl sm:rounded-2xl bg-gradient-to-br ${audience.gradient} border border-primary/20 group-hover:border-primary/50 transition-all duration-300 overflow-hidden`}>
                   {/* Top accent bar */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${audience.iconGradient}`}></div>
+                  <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r ${audience.iconGradient}`}></div>
 
                   {/* Card content */}
-                  <div className="p-8 sm:p-10 h-full flex flex-col">
+                  <div className="p-5 sm:p-6 lg:p-8 h-full flex flex-col">
                     {/* Icon container */}
-                    <div className="mb-8">
-                      <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${audience.iconGradient} flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                        <span className="text-5xl">{audience.icon}</span>
+                    <div className="mb-4 sm:mb-6">
+                      <div className={`w-16 sm:w-20 h-16 sm:h-20 rounded-lg sm:rounded-xl bg-gradient-to-br ${audience.iconGradient} flex items-center justify-center group-hover:scale-105 sm:group-hover:scale-110 group-hover:rotate-2 sm:group-hover:rotate-3 transition-all duration-300 shadow-md`}>
+                        <span className="text-3xl sm:text-4xl">{audience.icon}</span>
                       </div>
                     </div>
 
                     {/* Title and description */}
-                    <h3 className="font-display text-2xl font-bold text-foreground mb-3">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2">
                       {audience.title}
                     </h3>
-                    <p className="text-muted-foreground text-base leading-relaxed mb-8 flex-1">
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 flex-1">
                       {audience.description}
                     </p>
 
                     {/* Features list */}
-                    <div className="space-y-3 pt-6 border-t border-primary/20">
+                    <div className="space-y-2 pt-4 sm:pt-5 border-t border-primary/20">
                       {audience.features.map((feature, featureIndex) => (
                         <div
                           key={featureIndex}
-                          className={`flex items-center gap-3 transition-all duration-300 ${
-                            activeCard === index ? "translate-x-2 opacity-100" : "opacity-90"
+                          className={`flex items-center gap-2 transition-all duration-300 ${
+                            activeCard === index ? "translate-x-1 opacity-100" : "opacity-90"
                           }`}
                           style={{
                             transitionDelay: `${featureIndex * 100}ms`,
                           }}
                         >
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${audience.iconGradient}`}></div>
-                          <span className="text-sm font-medium text-foreground">{feature}</span>
+                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${audience.iconGradient} flex-shrink-0`}></div>
+                          <span className="text-xs sm:text-sm font-medium text-foreground">{feature}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* Hover indicator */}
-                    <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                    <div className="mt-4 flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">
                       <span>Discover more</span>
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                      <span className="group-hover:translate-x-0.5 transition-transform duration-300">→</span>
                     </div>
                   </div>
                 </div>
