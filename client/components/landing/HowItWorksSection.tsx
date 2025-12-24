@@ -6,21 +6,18 @@ const steps = [
     description: "Working closely with creators to develop original, culture-led content.",
     icon: "✏️",
     number: "01",
-    gradient: "from-primary to-secondary",
   },
   {
     title: "We Go Live",
     description: "Broadcasting experiences through platforms people already use and trust.",
     icon: "🔴",
     number: "02",
-    gradient: "from-secondary to-primary",
   },
   {
     title: "We Build Community",
     description: "Turning viewers into participants through interaction, conversation, and shared culture.",
     icon: "🤝",
     number: "03",
-    gradient: "from-primary via-secondary to-primary",
   },
 ];
 
