@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { Zap, MessageCircle } from "lucide-react";
 
 export const VisionSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
