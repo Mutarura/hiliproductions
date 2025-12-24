@@ -68,15 +68,15 @@ export const FeaturesSection = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Sneak Peek Features
+            What We Do
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A glimpse of what's coming
+            Creating culture-led digital experiences for Africa
           </p>
         </div>
 
         {/* Feature cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index) => (
             <div
               key={index}
