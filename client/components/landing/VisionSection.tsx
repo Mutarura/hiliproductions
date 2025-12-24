@@ -30,56 +30,56 @@ export const VisionSection = () => {
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <div className="space-y-6">
-          {/* Main vision text */}
-          <p
-            className={`text-2xl sm:text-3xl font-display font-bold text-foreground leading-relaxed transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
-            We're building a home for creators, dreamers, gamers, and storytellers across Kenya.
-          </p>
-
-          {/* Animated divider line */}
-          <div
-            className={`flex items-center justify-center gap-4 transition-all duration-1000 delay-200 ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className={`flex-1 h-px bg-gradient-to-r from-transparent via-primary to-transparent ${isVisible ? "animate-pulse" : ""}`}></div>
-          </div>
-
-          {/* Secondary vision text */}
-          <p
-            className={`text-2xl sm:text-3xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary transition-all duration-1000 delay-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
-            Hili is where moments go live — and where voices rise.
-          </p>
-        </div>
-
-        {/* Icon cards */}
-        <div
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-8 mt-16 transition-all duration-1000 delay-500 ${
+      <div className="relative z-10 max-w-6xl mx-auto">
+        {/* Section heading */}
+        <h2
+          className={`text-4xl sm:text-5xl font-display font-bold text-foreground text-center mb-16 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* Creativity icon */}
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center glow">
-              <Zap className="text-primary" size={32} />
+          Why Hili Exists
+        </h2>
+
+        {/* Why Hili exists - 3 items grid */}
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          {/* Creators */}
+          <div className="relative group">
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl group-hover:shadow-primary/20 transition-all duration-300"></div>
+            <div className="relative p-8 h-full flex flex-col justify-start">
+              <h3 className="text-2xl font-display font-bold text-foreground mb-2">Creators</h3>
+              <p className="text-sm text-primary font-semibold mb-4">Under-monetized. Overlooked.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Hili creates space for fair collaboration, creative freedom, and growth.
+              </p>
             </div>
-            <p className="text-muted-foreground">Unbounded Creativity</p>
           </div>
 
-          {/* Community icon */}
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-secondary/30 to-secondary/10 flex items-center justify-center glow-gold">
-              <MessageCircle className="text-secondary" size={32} />
+          {/* Audiences */}
+          <div className="relative group">
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-secondary/10 to-primary/5 border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl group-hover:shadow-secondary/20 transition-all duration-300"></div>
+            <div className="relative p-8 h-full flex flex-col justify-start">
+              <h3 className="text-2xl font-display font-bold text-foreground mb-2">Audiences</h3>
+              <p className="text-sm text-secondary font-semibold mb-4">Disconnected from real culture.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Hili delivers authentic African content built around community and identity.
+              </p>
             </div>
-            <p className="text-muted-foreground">Thriving Community</p>
+          </div>
+
+          {/* Culture */}
+          <div className="relative group">
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl group-hover:shadow-primary/20 transition-all duration-300"></div>
+            <div className="relative p-8 h-full flex flex-col justify-start">
+              <h3 className="text-2xl font-display font-bold text-foreground mb-2">Culture</h3>
+              <p className="text-sm text-primary font-semibold mb-4">Filtered and diluted online.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Hili centers African stories, voices, and moments — as they are.
+              </p>
+            </div>
           </div>
         </div>
       </div>
