@@ -2,24 +2,34 @@ import { useEffect, useRef, useState } from "react";
 
 const features = [
   {
-    title: "Stream Everything",
-    description: "From music to podcasts and beyond.",
-    icon: "🎵",
+    title: "Creator-Led Shows",
+    description: "Original shows driven by African creators, voices, and stories.",
+    icon: "🎬",
   },
   {
-    title: "Earn With Fans",
-    description: "Direct support using Hili Coins.",
-    icon: "💰",
+    title: "Live Digital Experiences",
+    description: "Live streams, conversations, and moments that bring culture online in real time.",
+    icon: "🔴",
   },
   {
-    title: "Go Live Anywhere",
-    description: "Simple, mobile-ready.",
-    icon: "📱",
+    title: "Cultural Storytelling",
+    description: "Authentic narratives rooted in East African youth culture.",
+    icon: "📖",
   },
   {
-    title: "Connect Communities",
-    description: "Built for real-time conversations.",
-    icon: "🌍",
+    title: "Gaming & Talk Content",
+    description: "Interactive conversations, gaming sessions, and community-led formats.",
+    icon: "🎮",
+  },
+  {
+    title: "Branded Entertainment",
+    description: "Culture-first brand collaborations that feel natural, not forced.",
+    icon: "✨",
+  },
+  {
+    title: "Digital Productions",
+    description: "High-quality production that elevates African creativity and energy.",
+    icon: "🎥",
   },
 ];
 
