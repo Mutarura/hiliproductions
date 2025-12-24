@@ -82,16 +82,16 @@ export const HeroSection = () => {
 
         {/* Scroll hint */}
         <div
-          className={`flex flex-col items-center gap-2 transition-all duration-1000 delay-500 ${
+          className={`flex flex-col items-center gap-1.5 transition-all duration-1000 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="text-sm text-muted-foreground">Discover what's coming</p>
+          <p className="text-xs sm:text-sm text-muted-foreground">Discover what's coming</p>
           <button
             onClick={scrollToNextSection}
-            className="text-primary hover:text-secondary transition-colors duration-300 animate-bounce group"
+            className="text-primary hover:text-secondary transition-colors duration-300 animate-bounce group p-1"
           >
-            <ChevronDown size={28} className="group-hover:scale-125 transition-transform duration-300" />
+            <ChevronDown size={24} className="sm:w-7 sm:h-7 group-hover:scale-125 transition-transform duration-300" />
           </button>
         </div>
       </div>
