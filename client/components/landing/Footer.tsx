@@ -65,16 +65,26 @@ export const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-primary/10 pt-8 pb-4">
+          {/* Hili tagline */}
+          <div className="text-center space-y-4 mb-8">
+            <p className="text-sm text-muted-foreground">
+              Hili means This.
+            </p>
+            <div className="space-y-2 text-sm text-foreground font-semibold">
+              <p>This culture.</p>
+              <p>This community.</p>
+              <p>This continent.</p>
+              <p>This moment.</p>
+            </div>
+          </div>
+
           {/* Copyright and attribution */}
           <div className="text-center space-y-2">
+            <p className="text-sm text-primary font-semibold">
+              Hili
+            </p>
             <p className="text-sm text-muted-foreground">
               © 2025 Hili. Made with ❤️ in Kenya.
-            </p>
-            <p className="text-sm text-primary font-semibold">
-              Something Kenyan is coming!
-            </p>
-            <p className="text-sm text-primary font-semibold">
-              #HiliNdioPlatform 🚀
             </p>
           </div>
         </div>
