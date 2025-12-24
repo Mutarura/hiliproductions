@@ -51,11 +51,11 @@ export const SignUpSection = () => {
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Main heading */}
         <h2
-          className={`font-display text-4xl sm:text-5xl font-bold text-foreground mb-6 transition-all duration-1000 ${
+          className={`font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Be part of <span className="gradient-text">the culture.</span>
+          Be part of <span className="gradient-text bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">the culture.</span>
         </h2>
 
         {/* Description */}
@@ -77,42 +77,50 @@ export const SignUpSection = () => {
             href="https://forms.gle/FR3gKdKcvALNUxiu5"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+            className="group relative px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 overflow-hidden"
           >
-            I'm a Viewer
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative">I'm a Viewer</span>
           </a>
           <a
             href="https://forms.gle/9fyvancYqXQg8i2XA"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-105"
+            className="group relative px-8 py-4 bg-gradient-to-r from-secondary to-primary text-white font-semibold rounded-xl border border-primary/30 hover:border-primary/80 hover:shadow-2xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-105 overflow-hidden"
           >
-            I'm a Creator
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative">I'm a Creator</span>
           </a>
         </div>
 
         {/* Email signup */}
         <div
-          className={`bg-card border border-primary/20 rounded-xl p-8 max-w-md mx-auto transition-all duration-1000 delay-500 ${
+          className={`relative group transition-all duration-1000 delay-500 max-w-md mx-auto ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <form onSubmit={handleEmailSignup} className="flex flex-col gap-3">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="px-4 py-3 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-              required
-            />
-            <button
-              type="submit"
-              className="px-4 py-3 bg-gradient-to-r from-primary to-secondary text-foreground font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
-            >
-              Join the Community
-            </button>
-          </form>
+          {/* Glow effect */}
+          <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary via-secondary to-primary opacity-0 group-hover:opacity-40 blur-xl group-hover:blur-2xl transition-all duration-500 -z-10"></div>
+
+          <div className="bg-gradient-to-br from-background via-background to-background border border-primary/30 group-hover:border-primary/60 rounded-2xl p-8 transition-all duration-300">
+            <form onSubmit={handleEmailSignup} className="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="px-4 py-3 bg-background border border-primary/30 focus:border-primary/60 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300"
+                required
+              />
+              <button
+                type="submit"
+                className="group relative px-4 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span className="relative">Join the Community</span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
