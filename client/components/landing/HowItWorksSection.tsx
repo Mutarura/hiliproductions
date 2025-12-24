@@ -101,10 +101,10 @@ export const HowItWorksSection = () => {
 
                     {/* Content */}
                     <div className="flex-1">
-                      <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                      <h3 className="font-display text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground text-base leading-relaxed">
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                         {step.description}
                       </p>
                     </div>
