@@ -55,7 +55,7 @@ export const SignUpSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Your opinion <span className="gradient-text">builds this.</span>
+          Be part of <span className="gradient-text">the culture.</span>
         </h2>
 
         {/* Description */}
@@ -64,7 +64,7 @@ export const SignUpSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          We're still crafting Hili — but you can help shape what comes next. Whether you're a creator or viewer, your insights will guide our design.
+          Get early access to Hili shows, live moments, and community drops as we grow together.
         </p>
 
         {/* CTA Buttons */}
