@@ -97,9 +97,6 @@ export const SignUpSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="text-sm text-muted-foreground mb-4">
-            Or get notified when we launch
-          </p>
           <form onSubmit={handleEmailSignup} className="flex flex-col gap-3">
             <input
               type="email"
@@ -113,7 +110,7 @@ export const SignUpSection = () => {
               type="submit"
               className="px-4 py-3 bg-gradient-to-r from-primary to-secondary text-foreground font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
             >
-              Notify Me
+              Join the Community
             </button>
           </form>
         </div>
