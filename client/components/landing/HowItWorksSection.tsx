@@ -66,7 +66,7 @@ export const HowItWorksSection = () => {
         {/* Steps with connecting flow */}
         <div className="relative">
           {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-1/3 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary opacity-30 z-0"></div>
+          <div className="hidden lg:block absolute top-1/3 left-0 right-0 h-0.5 bg-primary/30 z-0"></div>
 
           {/* Steps grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
