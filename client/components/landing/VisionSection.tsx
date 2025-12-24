@@ -23,16 +23,17 @@ export const VisionSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-24 px-6 bg-background overflow-hidden">
-      {/* Background gradient */}
+    <section ref={sectionRef} className="relative py-32 px-6 bg-background overflow-hidden">
+      {/* Animated background gradient */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section heading */}
         <h2
-          className={`text-4xl sm:text-5xl font-display font-bold text-foreground text-center mb-16 transition-all duration-1000 ${
+          className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground text-center mb-20 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -46,38 +47,86 @@ export const VisionSection = () => {
           }`}
         >
           {/* Creators */}
-          <div className="relative group">
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl group-hover:shadow-primary/20 transition-all duration-300"></div>
-            <div className="relative p-8 h-full flex flex-col justify-start">
-              <h3 className="text-2xl font-display font-bold text-foreground mb-2">Creators</h3>
+          <div className="relative group h-full">
+            {/* Animated glow */}
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-primary to-secondary opacity-0 group-hover:opacity-30 blur-xl group-hover:blur-2xl transition-all duration-500 -z-10"></div>
+
+            <div className="relative rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 group-hover:border-primary/60 transition-all duration-300 p-8 sm:p-10 h-full flex flex-col">
+              {/* Top accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary rounded-t-2xl"></div>
+
+              {/* Icon */}
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl">👨‍🎨</span>
+              </div>
+
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3">Creators</h3>
               <p className="text-sm text-primary font-semibold mb-4">Under-monetized. Overlooked.</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed flex-1">
                 Hili creates space for fair collaboration, creative freedom, and growth.
               </p>
+
+              {/* Hover indicator */}
+              <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                <span className="w-1 h-1 rounded-full bg-primary"></span>
+                <span>Empower creators</span>
+              </div>
             </div>
           </div>
 
           {/* Audiences */}
-          <div className="relative group">
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-secondary/10 to-primary/5 border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl group-hover:shadow-secondary/20 transition-all duration-300"></div>
-            <div className="relative p-8 h-full flex flex-col justify-start">
-              <h3 className="text-2xl font-display font-bold text-foreground mb-2">Audiences</h3>
+          <div className="relative group h-full">
+            {/* Animated glow */}
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-secondary to-primary opacity-0 group-hover:opacity-30 blur-xl group-hover:blur-2xl transition-all duration-500 -z-10"></div>
+
+            <div className="relative rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-primary/30 group-hover:border-primary/60 transition-all duration-300 p-8 sm:p-10 h-full flex flex-col">
+              {/* Top accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary to-primary rounded-t-2xl"></div>
+
+              {/* Icon */}
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary/30 to-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl">👥</span>
+              </div>
+
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3">Audiences</h3>
               <p className="text-sm text-secondary font-semibold mb-4">Disconnected from real culture.</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed flex-1">
                 Hili delivers authentic African content built around community and identity.
               </p>
+
+              {/* Hover indicator */}
+              <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground group-hover:text-secondary transition-colors duration-300">
+                <span className="w-1 h-1 rounded-full bg-secondary"></span>
+                <span>Connect communities</span>
+              </div>
             </div>
           </div>
 
           {/* Culture */}
-          <div className="relative group">
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl group-hover:shadow-primary/20 transition-all duration-300"></div>
-            <div className="relative p-8 h-full flex flex-col justify-start">
-              <h3 className="text-2xl font-display font-bold text-foreground mb-2">Culture</h3>
+          <div className="relative group h-full">
+            {/* Animated glow */}
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-primary via-secondary to-primary opacity-0 group-hover:opacity-30 blur-xl group-hover:blur-2xl transition-all duration-500 -z-10"></div>
+
+            <div className="relative rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/10 border border-primary/30 group-hover:border-primary/60 transition-all duration-300 p-8 sm:p-10 h-full flex flex-col">
+              {/* Top accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-t-2xl"></div>
+
+              {/* Icon */}
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl">🌍</span>
+              </div>
+
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3">Culture</h3>
               <p className="text-sm text-primary font-semibold mb-4">Filtered and diluted online.</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed flex-1">
                 Hili centers African stories, voices, and moments — as they are.
               </p>
+
+              {/* Hover indicator */}
+              <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                <span className="w-1 h-1 rounded-full bg-primary"></span>
+                <span>Celebrate culture</span>
+              </div>
             </div>
           </div>
         </div>
