@@ -55,26 +55,26 @@ export const WhoHiliIsForSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 px-6 bg-background overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden">
       {/* Animated background gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-primary/5 sm:bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-secondary/5 sm:bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-20">
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4">
             Who Hili Is For
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-2">
             One platform. Three essential communities. Infinite possibilities.
           </p>
         </div>
 
-        {/* Audience cards - Premium layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Audience cards - Compact mobile-first layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {audiences.map((audience, index) => (
             <div
               key={index}
