@@ -70,28 +70,7 @@ export const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-primary/10 pt-12 pb-6">
-          {/* Hili tagline */}
-          <div className="text-center space-y-6 mb-12">
-            <p className="text-base text-muted-foreground font-medium">
-              Hili means This.
-            </p>
-            <div className="space-y-3 text-base text-foreground font-semibold">
-              <p className="group hover:text-primary transition-colors duration-300">
-                <span className="text-primary group-hover:scale-110 transition-transform duration-300 inline-block">•</span> This culture.
-              </p>
-              <p className="group hover:text-secondary transition-colors duration-300">
-                <span className="text-secondary group-hover:scale-110 transition-transform duration-300 inline-block">•</span> This community.
-              </p>
-              <p className="group hover:text-primary transition-colors duration-300">
-                <span className="text-primary group-hover:scale-110 transition-transform duration-300 inline-block">•</span> This continent.
-              </p>
-              <p className="group hover:text-secondary transition-colors duration-300">
-                <span className="text-secondary group-hover:scale-110 transition-transform duration-300 inline-block">•</span> This moment.
-              </p>
-            </div>
-          </div>
-
+        <div className="border-t border-primary/10 pt-12">
           {/* Copyright and attribution */}
           <div className="text-center space-y-2">
             <p className="text-sm text-muted-foreground">
