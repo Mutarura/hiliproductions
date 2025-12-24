@@ -148,8 +148,8 @@ export const WhoHiliIsForSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="mt-12 sm:mt-16 text-center">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Whether you create, watch, or collaborate — Hili is built for you to thrive.
           </p>
         </div>
