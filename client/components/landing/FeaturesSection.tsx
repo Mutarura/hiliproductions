@@ -5,31 +5,29 @@ const features = [
     title: "Creator-Led Shows",
     description: "Original shows driven by African creators, voices, and stories.",
     icon: "🎬",
+    color: "from-primary/20 to-primary/5",
+    accentColor: "primary",
   },
   {
     title: "Live Digital Experiences",
     description: "Live streams, conversations, and moments that bring culture online in real time.",
     icon: "🔴",
+    color: "from-secondary/20 to-secondary/5",
+    accentColor: "secondary",
   },
   {
     title: "Cultural Storytelling",
     description: "Authentic narratives rooted in East African youth culture.",
     icon: "📖",
-  },
-  {
-    title: "Gaming & Talk Content",
-    description: "Interactive conversations, gaming sessions, and community-led formats.",
-    icon: "🎮",
-  },
-  {
-    title: "Branded Entertainment",
-    description: "Culture-first brand collaborations that feel natural, not forced.",
-    icon: "✨",
+    color: "from-primary/20 to-secondary/5",
+    accentColor: "primary",
   },
   {
     title: "Digital Productions",
     description: "High-quality production that elevates African creativity and energy.",
     icon: "🎥",
+    color: "from-secondary/20 to-primary/5",
+    accentColor: "secondary",
   },
 ];
 
