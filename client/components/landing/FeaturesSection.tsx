@@ -89,29 +89,26 @@ export const FeaturesSection = () => {
               }}
             >
               {/* Card background with gradient */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} border border-primary/20 group-hover:border-primary/40 group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-300`}></div>
-
-              {/* Decorative top accent */}
-              <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}></div>
+              <div className={`absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br ${feature.color} border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl sm:group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-300`}></div>
 
               {/* Card content */}
-              <div className="relative p-8 sm:p-10 h-full flex flex-col justify-between">
+              <div className="relative p-5 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
                 <div>
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-3xl">{feature.icon}</span>
+                  <div className={`w-12 sm:w-14 h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-2xl sm:text-3xl">{feature.icon}</span>
                   </div>
-                  <h3 className="font-display text-2xl font-bold text-foreground mb-3">
+                  <h3 className="font-display text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-2 sm:mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground text-base leading-relaxed">
+                  <p className="text-muted-foreground text-xs sm:text-sm lg:text-base leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
 
                 {/* Hover accent line */}
-                <div className="mt-8 flex items-center gap-3 group-hover:gap-4 transition-all duration-300">
-                  <div className="h-1 flex-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="text-primary group-hover:translate-x-1 transition-transform duration-300">→</div>
+                <div className="mt-5 sm:mt-6 lg:mt-8 flex items-center gap-2 sm:gap-3 group-hover:gap-3 sm:group-hover:gap-4 transition-all duration-300">
+                  <div className="h-0.5 sm:h-1 flex-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="text-primary group-hover:translate-x-0.5 sm:group-hover:translate-x-1 transition-transform duration-300 text-sm">→</div>
                 </div>
               </div>
             </div>
