@@ -1,4 +1,4 @@
-import { Instagram, Mail, Linkedin } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 
 // Custom social icons using SVG
 const TwitterIcon = (props: { className?: string }) => (
