@@ -101,7 +101,7 @@ export const FeaturesSection = () => {
         {/* Call to action text */}
         <div className="text-center border-t border-primary/20 pt-8 sm:pt-12">
           <p className="text-muted-foreground text-sm sm:text-base lg:text-lg px-2">
-            This is what we're building — <span className="text-primary font-semibold">for creators, for audiences, for culture</span>.
+            Designed for creators. Experienced by communities. Watched everywhere.
           </p>
         </div>
       </div>
