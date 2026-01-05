@@ -16,9 +16,12 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background pt-6 sm:pt-8 pb-16 sm:pb-20">
       {/* Logo Header */}
       <div className="absolute top-6 sm:top-8 left-6 sm:left-8 z-50">
-        <h1 className="font-display text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-600 to-yellow-400 bg-clip-text text-transparent">
+        <h1 className="font-display text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-600 to-yellow-400 bg-clip-text text-transparent mb-2">
           Hili
         </h1>
+        <p className="text-xs sm:text-sm text-muted-foreground font-semibold uppercase tracking-wider">
+          This is Culture. This is Community. This is Africa.
+        </p>
       </div>
       {/* Animated background gradient elements with enhanced visuals */}
       <div className="absolute inset-0 overflow-hidden">
