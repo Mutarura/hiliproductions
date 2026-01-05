@@ -1,15 +1,15 @@
 import { Instagram, Mail } from "lucide-react";
 
 // Custom social icons using SVG
-const TwitterIcon = (props: { className?: string }) => (
+const XIcon = (props: { className?: string }) => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={props.className}>
-    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" />
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.205-6.802-5.94 6.802h-3.31l7.73-8.835L2.423 2.25h6.802l4.706 6.223 5.303-6.223zM17.534 20.066h1.885L6.455 3.906H4.482l13.052 16.16z" />
   </svg>
 );
 
-const TiktokIcon = (props: { className?: string }) => (
+const YouTubeIcon = (props: { className?: string }) => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={props.className}>
-    <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
