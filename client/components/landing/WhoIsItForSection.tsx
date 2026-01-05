@@ -70,22 +70,9 @@ export const WhoIsItForSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Logo */}
-        <div
-          className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F7c5f4b5caf2e44b1b7b100ea07281483%2Fd89e77b11fbb4222830900162a9d536b?format=webp&width=800"
-            alt="Hili"
-            className="h-16 sm:h-20 lg:h-24 w-auto mx-auto"
-          />
-        </div>
-
         {/* Section title */}
         <div
-          className={`text-center mb-16 sm:mb-20 lg:mb-24 transition-all duration-1000 delay-200 ${
+          className={`text-center mb-16 sm:mb-20 lg:mb-24 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
