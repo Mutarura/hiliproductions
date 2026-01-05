@@ -2,21 +2,21 @@ import { Instagram, Mail, Linkedin } from "lucide-react";
 
 // Custom social icons using SVG
 const TwitterIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" />
   </svg>
 );
 
 const TiktokIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19 3a9 9 0 01-9 9 9 9 0 01-9-9 9 9 0 0118 0z" />
-    <path d="M9.6 12.6v5.4a1.5 1.5 0 01-3 0v-5.4m6-3.6v9a1.5 1.5 0 01-3 0v-9" />
+    <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
   </svg>
 );
 
 const TwitchIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17 2H3v14h4v3l3-3h4l3-4V2z" />
+    <path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.116v-15.364h16.474v11.782z" />
+    <path d="M11.857 7.241h-1.969v5.892h1.969v-5.892zm4.671 0h-1.969v5.892h1.969v-5.892z" />
   </svg>
 );
 
