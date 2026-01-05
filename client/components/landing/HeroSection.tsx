@@ -30,7 +30,7 @@ export const HeroSection = () => {
         <div className="hidden sm:block absolute top-1/2 left-1/3 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "2s" }}></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center mt-8 sm:mt-12 lg:mt-0">
         {/* Main headline */}
         <h1
           className={`font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 transition-all duration-1000 leading-tight text-foreground ${
