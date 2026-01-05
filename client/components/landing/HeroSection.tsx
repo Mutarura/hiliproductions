@@ -52,7 +52,7 @@ export const HeroSection = () => {
           Built for Africa. Built for creators.
         </p>
 
-        {/* CTA Buttons with enhanced styling */}
+        {/* CTA Buttons */}
         <div
           className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 transition-all duration-1000 delay-300 px-2 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -65,17 +65,14 @@ export const HeroSection = () => {
             className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm sm:text-base rounded-lg sm:rounded-xl hover:shadow-xl sm:hover:shadow-2xl hover:shadow-primary/40 sm:hover:shadow-primary/50 transition-all duration-300 hover:scale-105 overflow-hidden active:scale-95"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative">Explore Hili</span>
+            <span className="relative">Collaborate</span>
           </a>
-          <a
-            href="https://forms.gle/9fyvancYqXQg8i2XA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-secondary to-primary text-white font-semibold text-sm sm:text-base rounded-lg sm:rounded-xl border border-primary/30 hover:border-primary/80 hover:shadow-xl sm:hover:shadow-2xl hover:shadow-secondary/40 sm:hover:shadow-secondary/50 transition-all duration-300 hover:scale-105 overflow-hidden active:scale-95"
+          <button
+            onClick={scrollToNextSection}
+            className="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-foreground/30 text-foreground font-semibold text-sm sm:text-base rounded-lg sm:rounded-xl hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-300 hover:scale-105 active:scale-95"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative">Join the Community</span>
-          </a>
+            <span className="relative">View Work</span>
+          </button>
         </div>
 
         {/* Scroll hint */}
