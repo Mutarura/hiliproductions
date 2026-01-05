@@ -1,4 +1,24 @@
-import { Twitter, Instagram, Music, Mail } from "lucide-react";
+import { Instagram, Mail, Linkedin } from "lucide-react";
+
+// Custom social icons using SVG
+const TwitterIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" />
+  </svg>
+);
+
+const TiktokIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 3a9 9 0 01-9 9 9 9 0 01-9-9 9 9 0 0118 0z" />
+    <path d="M9.6 12.6v5.4a1.5 1.5 0 01-3 0v-5.4m6-3.6v9a1.5 1.5 0 01-3 0v-9" />
+  </svg>
+);
+
+const TwitchIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17 2H3v14h4v3l3-3h4l3-4V2z" />
+  </svg>
+);
 
 export const Footer = () => {
   return (
