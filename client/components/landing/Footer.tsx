@@ -35,7 +35,7 @@ export const Footer = () => {
             This is Hili.
           </h2>
           <p className="text-lg sm:text-xl lg:text-2xl text-foreground">
-            This culture. This community. This moment.
+            This is Culture. This is Community. This is African.
           </p>
         </div>
 
