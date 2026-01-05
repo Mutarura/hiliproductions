@@ -21,11 +21,6 @@ const features = [
     icon: "✨",
     color: "from-secondary/20 to-primary/5",
   },
-  {
-    title: "Community-Driven Content",
-    icon: "👥",
-    color: "from-primary/20 to-primary/5",
-  },
 ];
 
 export const FeaturesSection = () => {
