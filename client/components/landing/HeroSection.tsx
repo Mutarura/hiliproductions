@@ -24,9 +24,15 @@ export const HeroSection = () => {
         {/* Primary gradient orb - smaller on mobile */}
         <div className="absolute -top-24 -right-24 sm:-top-32 sm:-right-32 w-48 sm:w-96 h-48 sm:h-96 bg-primary/20 sm:bg-primary/30 rounded-full blur-3xl animate-glow-pulse"></div>
         {/* Secondary gradient orb - smaller on mobile */}
-        <div className="absolute -bottom-24 -left-24 sm:-bottom-32 sm:-left-32 w-48 sm:w-96 h-48 sm:h-96 bg-secondary/15 sm:bg-secondary/25 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "1s" }}></div>
+        <div
+          className="absolute -bottom-24 -left-24 sm:-bottom-32 sm:-left-32 w-48 sm:w-96 h-48 sm:h-96 bg-secondary/15 sm:bg-secondary/25 rounded-full blur-3xl animate-glow-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
         {/* Tertiary accent - hidden on mobile */}
-        <div className="hidden sm:block absolute top-1/2 left-1/3 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "2s" }}></div>
+        <div
+          className="hidden sm:block absolute top-1/2 left-1/3 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-glow-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center mt-8 sm:mt-12 lg:mt-0">
@@ -86,12 +92,17 @@ export const HeroSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="text-xs sm:text-sm text-muted-foreground">Discover what's coming</p>
+          <p className="text-xs sm:text-sm text-muted-foreground">
+            Discover what's coming
+          </p>
           <button
             onClick={scrollToNextSection}
             className="text-primary hover:text-secondary transition-colors duration-300 animate-bounce group p-1"
           >
-            <ChevronDown size={24} className="sm:w-7 sm:h-7 group-hover:scale-125 transition-transform duration-300" />
+            <ChevronDown
+              size={24}
+              className="sm:w-7 sm:h-7 group-hover:scale-125 transition-transform duration-300"
+            />
           </button>
         </div>
       </div>

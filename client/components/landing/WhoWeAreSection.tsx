@@ -13,7 +13,7 @@ export const WhoWeAreSection = () => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) {
@@ -77,10 +77,12 @@ export const WhoWeAreSection = () => {
           }`}
         >
           <p className="text-base sm:text-lg lg:text-xl text-foreground leading-relaxed mb-4">
-            Hili is a digital productions and live media company rooted in East Africa.
+            Hili is a digital productions and live media company rooted in East
+            Africa.
           </p>
           <p className="text-base sm:text-lg lg:text-xl text-foreground leading-relaxed">
-            We create creator-led shows, live broadcasts, and cultural experiences that bring African stories to life — in real time.
+            We create creator-led shows, live broadcasts, and cultural
+            experiences that bring African stories to life — in real time.
           </p>
         </div>
       </div>

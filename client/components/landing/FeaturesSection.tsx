@@ -32,12 +32,14 @@ export const FeaturesSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute("data-index") || "0");
+            const index = parseInt(
+              entry.target.getAttribute("data-index") || "0",
+            );
             setVisibleCards((prev) => [...new Set([...prev, index])]);
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     const cards = sectionRef.current?.querySelectorAll("[data-index]");
@@ -47,7 +49,10 @@ export const FeaturesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden"
+    >
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-secondary/5 sm:bg-secondary/10 rounded-full blur-3xl"></div>
@@ -78,11 +83,15 @@ export const FeaturesSection = () => {
               }}
             >
               {/* Card background with gradient */}
-              <div className={`absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br ${feature.color} border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl sm:group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-300`}></div>
+              <div
+                className={`absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br ${feature.color} border border-primary/20 group-hover:border-primary/40 group-hover:shadow-xl sm:group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-300`}
+              ></div>
 
               {/* Card content */}
               <div className="relative p-5 sm:p-6 lg:p-8 h-full flex flex-col items-center justify-center text-center">
-                <div className={`w-12 sm:w-14 h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-12 sm:w-14 h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300`}
+                >
                   <span className="text-2xl sm:text-3xl">{feature.icon}</span>
                 </div>
                 <h3 className="font-display text-lg sm:text-xl lg:text-2xl font-bold text-foreground">
@@ -96,7 +105,8 @@ export const FeaturesSection = () => {
         {/* Call to action text */}
         <div className="text-center border-t border-primary/20 pt-8 sm:pt-12">
           <p className="text-muted-foreground text-sm sm:text-base lg:text-lg px-2">
-            Designed for creators. Experienced by communities. Watched everywhere.
+            Designed for creators. Experienced by communities. Watched
+            everywhere.
           </p>
         </div>
       </div>

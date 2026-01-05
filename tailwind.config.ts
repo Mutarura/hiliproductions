@@ -100,7 +100,7 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
         },
@@ -112,7 +112,7 @@ export default {
         "slide-up": "slide-up 0.8s ease-out forwards",
         "slide-in-left": "slide-in-left 0.8s ease-out forwards",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },

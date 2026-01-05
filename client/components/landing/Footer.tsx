@@ -2,19 +2,37 @@ import { Instagram, Mail } from "lucide-react";
 
 // Custom social icons using SVG
 const XIcon = (props: { className?: string }) => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={props.className}>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={props.className}
+  >
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.637l-5.205-6.802-5.94 6.802h-3.31l7.73-8.835L2.423 2.25h6.802l4.706 6.223 5.303-6.223zM17.534 20.066h1.885L6.455 3.906H4.482l13.052 16.16z" />
   </svg>
 );
 
 const YouTubeIcon = (props: { className?: string }) => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={props.className}>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={props.className}
+  >
     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
 const TwitchIcon = (props: { className?: string }) => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={props.className}>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={props.className}
+  >
     <path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.116v-15.364h16.474v11.782z" />
     <path d="M11.857 7.241h-1.969v5.892h1.969v-5.892zm4.671 0h-1.969v5.892h1.969v-5.892z" />
   </svg>
@@ -73,7 +91,10 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
-                <Instagram size={20} className="text-primary group-hover:text-secondary transition-colors duration-300" />
+                <Instagram
+                  size={20}
+                  className="text-primary group-hover:text-secondary transition-colors duration-300"
+                />
               </a>
               <a
                 href="https://x.com"
@@ -107,7 +128,10 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Email"
               >
-                <Mail size={20} className="text-primary group-hover:text-secondary transition-colors duration-300" />
+                <Mail
+                  size={20}
+                  className="text-primary group-hover:text-secondary transition-colors duration-300"
+                />
               </a>
             </div>
 

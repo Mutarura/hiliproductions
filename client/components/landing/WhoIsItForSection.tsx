@@ -13,7 +13,7 @@ export const WhoIsItForSection = () => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (sectionRef.current) {
@@ -92,9 +92,7 @@ export const WhoIsItForSection = () => {
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
-              } ${
-                hoveredCard === card.id ? "lg:scale-105" : ""
-              }`}
+              } ${hoveredCard === card.id ? "lg:scale-105" : ""}`}
               style={{
                 transitionDelay: `${index * 100}ms`,
               }}
@@ -110,9 +108,20 @@ export const WhoIsItForSection = () => {
               <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none">
                 <svg width="100%" height="100%">
                   <filter id="noise">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" />
+                    <feTurbulence
+                      type="fractalNoise"
+                      baseFrequency="0.9"
+                      numOctaves="4"
+                      result="noise"
+                    />
                   </filter>
-                  <rect width="100%" height="100%" fill="white" filter="url(#noise)" opacity="0.05" />
+                  <rect
+                    width="100%"
+                    height="100%"
+                    fill="white"
+                    filter="url(#noise)"
+                    opacity="0.05"
+                  />
                 </svg>
               </div>
 
@@ -123,7 +132,9 @@ export const WhoIsItForSection = () => {
               <div className="relative h-full flex flex-col justify-between p-6 sm:p-8 lg:p-10 text-white">
                 {/* Top section - always visible */}
                 <div>
-                  <div className={`inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-500 group-hover:bg-white/20`}>
+                  <div
+                    className={`inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-500 group-hover:bg-white/20`}
+                  >
                     <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white/90">
                       {card.label}
                     </span>
@@ -147,12 +158,16 @@ export const WhoIsItForSection = () => {
                   </p>
 
                   {/* Accent line */}
-                  <div className={`mt-4 sm:mt-6 h-1 w-12 bg-gradient-to-r ${card.accentColor} rounded-full`}></div>
+                  <div
+                    className={`mt-4 sm:mt-6 h-1 w-12 bg-gradient-to-r ${card.accentColor} rounded-full`}
+                  ></div>
                 </div>
               </div>
 
               {/* Corner accent - subtle visual interest */}
-              <div className={`absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-tl ${card.accentColor} opacity-5 group-hover:opacity-10 transition-opacity duration-500 rounded-tl-full pointer-events-none`}></div>
+              <div
+                className={`absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-tl ${card.accentColor} opacity-5 group-hover:opacity-10 transition-opacity duration-500 rounded-tl-full pointer-events-none`}
+              ></div>
             </div>
           ))}
         </div>
