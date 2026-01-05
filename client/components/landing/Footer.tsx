@@ -65,7 +65,7 @@ export const Footer = () => {
           {/* Social links and info */}
           <div className="flex flex-col items-center gap-8">
             {/* Social icons */}
-            <div className="flex gap-6">
+            <div className="flex gap-4 sm:gap-6">
               <a
                 href="https://instagram.com"
                 target="_blank"
@@ -82,7 +82,7 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
-                <Twitter size={20} className="text-primary group-hover:text-secondary transition-colors duration-300" />
+                <TwitterIcon />
               </a>
               <a
                 href="https://tiktok.com"
@@ -91,16 +91,7 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="TikTok"
               >
-                <Music size={20} className="text-primary group-hover:text-secondary transition-colors duration-300" />
-              </a>
-              <a
-                href="https://x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
-                aria-label="X"
-              >
-                <Twitter size={20} className="text-primary group-hover:text-secondary transition-colors duration-300" />
+                <TiktokIcon />
               </a>
               <a
                 href="https://twitch.tv"
@@ -109,7 +100,7 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Twitch"
               >
-                <Music size={20} className="text-primary group-hover:text-secondary transition-colors duration-300" />
+                <TwitchIcon />
               </a>
               <a
                 href="mailto:hello@hili.com"
@@ -123,7 +114,7 @@ export const Footer = () => {
             {/* Copyright and message */}
             <div className="text-center space-y-2">
               <p className="text-sm text-muted-foreground">
-                © Hili
+                © Hili Productions
               </p>
               <p className="text-sm text-primary font-semibold">
                 Something Kenyan is coming!!
