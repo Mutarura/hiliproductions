@@ -27,31 +27,29 @@ export const HeroSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         {/* Main headline */}
         <h1
-          className={`font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 transition-all duration-1000 leading-tight ${
+          className={`font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 transition-all duration-1000 leading-tight text-foreground ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <span className="gradient-text bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary">Hili</span>
-          <br className="hidden sm:block" />
-          <span className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-6xl">Culture-Led Digital Productions & Live Media</span>
+          African Culture, In Motion.
         </h1>
 
         {/* Subheading */}
         <p
-          className={`text-sm sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent max-w-3xl mx-auto mb-3 sm:mb-4 transition-all duration-1000 delay-200 px-2 ${
+          className={`text-base sm:text-xl md:text-2xl font-semibold text-foreground max-w-3xl mx-auto mb-4 sm:mb-6 transition-all duration-1000 delay-200 px-2 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Built for Africa. Built for Creators. Built for the People.
+          A culture-led digital productions and live media company.
         </p>
 
-        {/* Description */}
+        {/* Micro-tagline */}
         <p
-          className={`text-xs sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-12 transition-all duration-1000 delay-200 px-2 ${
+          className={`text-xs sm:text-sm md:text-base text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-12 transition-all duration-1000 delay-200 px-2 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Hili is a people-first digital productions company creating creator-led shows, live streams, and culturally rooted digital experiences — bringing African culture to life online.
+          Built for Africa. Built for creators.
         </p>
 
         {/* CTA Buttons with enhanced styling */}
