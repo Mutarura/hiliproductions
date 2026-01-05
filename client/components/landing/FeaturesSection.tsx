@@ -63,7 +63,7 @@ export const FeaturesSection = () => {
         </div>
 
         {/* Feature cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 lg:gap-8 mb-12 sm:mb-16">
           {features.map((feature, index) => (
             <div
               key={index}
