@@ -3,31 +3,28 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     title: "Creator-Led Shows",
-    description: "Original shows driven by African creators, voices, and stories.",
     icon: "🎬",
     color: "from-primary/20 to-primary/5",
-    accentColor: "primary",
   },
   {
-    title: "Live Digital Experiences",
-    description: "Live streams, conversations, and moments that bring culture online in real time.",
+    title: "Live Event Broadcasts",
     icon: "🔴",
     color: "from-secondary/20 to-secondary/5",
-    accentColor: "secondary",
   },
   {
-    title: "Cultural Storytelling",
-    description: "Authentic narratives rooted in East African youth culture.",
-    icon: "📖",
+    title: "Cultural Digital Experiences",
+    icon: "🌍",
     color: "from-primary/20 to-secondary/5",
-    accentColor: "primary",
   },
   {
-    title: "Digital Productions",
-    description: "High-quality production that elevates African creativity and energy.",
-    icon: "🎥",
+    title: "Branded Entertainment",
+    icon: "✨",
     color: "from-secondary/20 to-primary/5",
-    accentColor: "secondary",
+  },
+  {
+    title: "Community-Driven Content",
+    icon: "👥",
+    color: "from-primary/20 to-primary/5",
   },
 ];
 
