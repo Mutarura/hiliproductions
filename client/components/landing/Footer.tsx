@@ -76,22 +76,22 @@ export const Footer = () => {
                 <Instagram size={20} className="text-primary group-hover:text-secondary transition-colors duration-300" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
+                aria-label="X"
               >
-                <TwitterIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
+                <XIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
               </a>
               <a
-                href="https://tiktok.com"
+                href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
-                aria-label="TikTok"
+                aria-label="YouTube"
               >
-                <TiktokIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
+                <YouTubeIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
               </a>
               <a
                 href="https://twitch.tv"
