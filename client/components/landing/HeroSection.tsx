@@ -16,12 +16,8 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background pt-6 sm:pt-8 pb-16 sm:pb-20">
       {/* Logo Header */}
-      <div className="absolute top-6 sm:top-8 left-6 sm:left-8 z-50">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F7c5f4b5caf2e44b1b7b100ea07281483%2Fd89e77b11fbb4222830900162a9d536b?format=webp&width=800"
-          alt="Hili"
-          className="h-12 sm:h-14 lg:h-16 w-auto"
-        />
+      <div className="absolute top-6 sm:top-8 left-6 sm:left-8 z-50 w-20 sm:w-24 lg:w-28">
+        <HiliLogo className="w-full h-auto" />
       </div>
       {/* Animated background gradient elements with enhanced visuals */}
       <div className="absolute inset-0 overflow-hidden">
