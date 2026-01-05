@@ -82,7 +82,7 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
-                <TwitterIcon />
+                <TwitterIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
               </a>
               <a
                 href="https://tiktok.com"
@@ -91,7 +91,7 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="TikTok"
               >
-                <TiktokIcon />
+                <TiktokIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
               </a>
               <a
                 href="https://twitch.tv"
@@ -100,7 +100,7 @@ export const Footer = () => {
                 className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Twitch"
               >
-                <TwitchIcon />
+                <TwitchIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
               </a>
               <a
                 href="mailto:hello@hili.com"
