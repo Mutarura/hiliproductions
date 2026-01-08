@@ -61,7 +61,7 @@ export const WhoIsItForSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden"
+      className="relative py-14 sm:py-28 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -72,11 +72,11 @@ export const WhoIsItForSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section title */}
         <div
-          className={`text-center mb-16 sm:mb-20 lg:mb-24 transition-all duration-1000 ${
+          className={`text-center mb-10 sm:mb-20 lg:mb-24 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground">
             Built For Those
             <br className="hidden sm:block" />
             Shaping Culture
@@ -84,11 +84,11 @@ export const WhoIsItForSection = () => {
         </div>
 
         {/* Cards grid - 2x2 layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 lg:gap-8">
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`group relative h-72 sm:h-80 lg:h-96 rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 transform ${
+              className={`group relative h-56 sm:h-80 lg:h-96 rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 transform ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
