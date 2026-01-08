@@ -14,9 +14,9 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background pt-6 sm:pt-8 pb-16 sm:pb-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background pt-4 sm:pt-8 pb-12 sm:pb-20">
       {/* Logo Header */}
-      <div className="absolute top-6 sm:top-8 left-6 sm:left-8 z-50 w-20 sm:w-24 lg:w-28">
+      <div className="absolute top-4 sm:top-8 left-4 sm:left-8 z-50 w-16 sm:w-24 lg:w-28">
         <HiliLogo className="w-full h-auto" />
       </div>
       {/* Animated background gradient elements with enhanced visuals */}
