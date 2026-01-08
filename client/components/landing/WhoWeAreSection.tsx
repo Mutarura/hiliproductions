@@ -141,9 +141,9 @@ export const WhoWeAreSection = () => {
       {/* Content container */}
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Heading with staggered animation */}
-        <div className="mb-12 sm:mb-16 lg:mb-20">
+        <div className="mb-8 sm:mb-16 lg:mb-20">
           <h2
-            className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground text-center leading-tight transition-all duration-1000 ${
+            className={`text-3xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground text-center leading-tight transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-12"
@@ -154,7 +154,7 @@ export const WhoWeAreSection = () => {
 
           {/* Decorative line under heading */}
           <div
-            className={`flex justify-center mt-8 sm:mt-10 transition-all duration-1000 delay-300 ${
+            className={`flex justify-center mt-5 sm:mt-10 transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
             }`}
             style={{ transformOrigin: "center" }}
@@ -165,20 +165,20 @@ export const WhoWeAreSection = () => {
 
         {/* Primary statement with enhanced styling */}
         <div
-          className={`mb-8 sm:mb-10 transition-all duration-1000 delay-500 ${
+          className={`mb-5 sm:mb-10 transition-all duration-1000 delay-500 ${
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-lg sm:text-xl lg:text-2xl text-foreground leading-relaxed text-center font-light">
+          <p className="text-base sm:text-xl lg:text-2xl text-foreground leading-relaxed text-center font-light">
             <span className="block">
               Hili is a{" "}
               <span className="font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 digital productions and live media company
               </span>{" "}
             </span>
-            <span className="block mt-2">rooted in East Africa.</span>
+            <span className="block mt-1 sm:mt-2">rooted in East Africa.</span>
           </p>
         </div>
 
@@ -190,7 +190,7 @@ export const WhoWeAreSection = () => {
               : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-base sm:text-lg lg:text-xl text-foreground/80 leading-relaxed text-center font-light max-w-3xl mx-auto">
+          <p className="text-sm sm:text-lg lg:text-xl text-foreground/80 leading-relaxed text-center font-light max-w-3xl mx-auto">
             We create{" "}
             <span className="text-foreground font-medium">
               creator-led shows,
@@ -204,7 +204,7 @@ export const WhoWeAreSection = () => {
         </div>
 
         {/* Subtle accent elements below text */}
-        <div className="flex justify-center gap-2 mt-12 sm:mt-14">
+        <div className="flex justify-center gap-2 mt-8 sm:mt-14">
           {[0, 1, 2].map((index) => (
             <div
               key={index}
