@@ -46,7 +46,7 @@ export const WhoWeAreSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 sm:py-32 lg:py-40 px-4 sm:px-6 bg-background overflow-hidden"
+      className="relative py-16 sm:py-32 lg:py-40 px-4 sm:px-6 bg-background overflow-hidden"
     >
       {/* Multi-layered background gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
