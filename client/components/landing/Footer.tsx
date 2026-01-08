@@ -40,7 +40,7 @@ const TwitchIcon = (props: { className?: string }) => (
 
 export const Footer = () => {
   return (
-    <footer className="relative border-t border-primary/20 bg-gradient-to-b from-background via-background to-background/80 backdrop-blur-sm py-20 sm:py-28 px-6 overflow-hidden">
+    <footer className="relative border-t border-primary/20 bg-gradient-to-b from-background via-background to-background/80 backdrop-blur-sm py-12 sm:py-28 px-4 sm:px-6 overflow-hidden">
       {/* Background gradient elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
@@ -48,17 +48,17 @@ export const Footer = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Main statement */}
-        <div className="text-center mb-16 sm:mb-20">
-          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6">
+        <div className="text-center mb-10 sm:mb-20">
+          <h2 className="font-display text-3xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-3 sm:mb-6">
             This is Hili.
           </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-foreground">
+          <p className="text-sm sm:text-xl lg:text-2xl text-foreground px-2">
             This is Culture. This is Community. This is African.
           </p>
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 sm:mb-20">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-20">
           <a
             href="https://forms.gle/FR3gKdKcvALNUxiu5"
             target="_blank"
