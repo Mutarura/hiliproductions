@@ -58,12 +58,12 @@ export const Footer = () => {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-20">
+        <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 justify-center mb-8 sm:mb-20">
           <a
             href="https://forms.gle/FR3gKdKcvALNUxiu5"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm sm:text-base rounded-lg sm:rounded-xl hover:shadow-xl sm:hover:shadow-2xl hover:shadow-primary/40 sm:hover:shadow-primary/50 transition-all duration-300 hover:scale-105 overflow-hidden active:scale-95 text-center"
+            className="group relative px-5 sm:px-8 py-2.5 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold text-xs sm:text-base rounded-lg sm:rounded-xl hover:shadow-xl sm:hover:shadow-2xl hover:shadow-primary/40 sm:hover:shadow-primary/50 transition-all duration-300 hover:scale-105 overflow-hidden active:scale-95 text-center"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative">Partner with us</span>
@@ -72,18 +72,18 @@ export const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-foreground/30 text-foreground font-semibold text-sm sm:text-base rounded-lg sm:rounded-xl hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-300 hover:scale-105 active:scale-95 text-center"
+            className="group relative px-5 sm:px-8 py-2.5 sm:py-4 border-2 border-foreground/30 text-foreground font-semibold text-xs sm:text-base rounded-lg sm:rounded-xl hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-300 hover:scale-105 active:scale-95 text-center"
           >
             <span className="relative">Follow the journey</span>
           </a>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-primary/10 pt-12 sm:pt-16">
+        <div className="border-t border-primary/10 pt-8 sm:pt-16">
           {/* Social links and info */}
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-6 sm:gap-8">
             {/* Social icons */}
-            <div className="flex gap-4 sm:gap-6">
+            <div className="flex gap-3 sm:gap-6">
               <a
                 href="https://instagram.com"
                 target="_blank"
