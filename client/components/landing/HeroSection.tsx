@@ -65,7 +65,7 @@ export const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div
-          className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 transition-all duration-1000 delay-300 px-2 ${
+          className={`flex flex-col sm:flex-row gap-2.5 sm:gap-4 justify-center mb-8 sm:mb-16 transition-all duration-1000 delay-300 px-2 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -73,14 +73,14 @@ export const HeroSection = () => {
             href="https://forms.gle/FR3gKdKcvALNUxiu5"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm sm:text-base rounded-lg sm:rounded-xl hover:shadow-xl sm:hover:shadow-2xl hover:shadow-primary/40 sm:hover:shadow-primary/50 transition-all duration-300 hover:scale-105 overflow-hidden active:scale-95"
+            className="group relative px-5 sm:px-8 py-2.5 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold text-xs sm:text-base rounded-lg sm:rounded-xl hover:shadow-xl sm:hover:shadow-2xl hover:shadow-primary/40 sm:hover:shadow-primary/50 transition-all duration-300 hover:scale-105 overflow-hidden active:scale-95"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative">Collaborate</span>
           </a>
           <button
             onClick={scrollToNextSection}
-            className="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-foreground/30 text-foreground font-semibold text-sm sm:text-base rounded-lg sm:rounded-xl hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-300 hover:scale-105 active:scale-95"
+            className="group relative px-5 sm:px-8 py-2.5 sm:py-4 border-2 border-foreground/30 text-foreground font-semibold text-xs sm:text-base rounded-lg sm:rounded-xl hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <span className="relative">View Work</span>
           </button>
