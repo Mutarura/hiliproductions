@@ -83,24 +83,24 @@ export const Footer = () => {
           {/* Social links and info */}
           <div className="flex flex-col items-center gap-6 sm:gap-8">
             {/* Social icons */}
-            <div className="flex gap-3 sm:gap-6">
+            <div className="flex gap-2.5 sm:gap-6">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
                 <Instagram
-                  size={20}
-                  className="text-primary group-hover:text-secondary transition-colors duration-300"
+                  size={18}
+                  className="sm:w-5 sm:h-5 text-primary group-hover:text-secondary transition-colors duration-300"
                 />
               </a>
               <a
                 href="https://x.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="X"
               >
                 <XIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
@@ -109,7 +109,7 @@ export const Footer = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="YouTube"
               >
                 <YouTubeIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
@@ -118,19 +118,19 @@ export const Footer = () => {
                 href="https://twitch.tv"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Twitch"
               >
                 <TwitchIcon className="text-primary group-hover:text-secondary transition-colors duration-300" />
               </a>
               <a
                 href="mailto:hello@hili.com"
-                className="group p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110"
                 aria-label="Email"
               >
                 <Mail
-                  size={20}
-                  className="text-primary group-hover:text-secondary transition-colors duration-300"
+                  size={18}
+                  className="sm:w-5 sm:h-5 text-primary group-hover:text-secondary transition-colors duration-300"
                 />
               </a>
             </div>
