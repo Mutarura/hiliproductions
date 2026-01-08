@@ -129,18 +129,18 @@ export const WhoIsItForSection = () => {
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
               {/* Content */}
-              <div className="relative h-full flex flex-col justify-between p-6 sm:p-8 lg:p-10 text-white">
+              <div className="relative h-full flex flex-col justify-between p-4 sm:p-8 lg:p-10 text-white">
                 {/* Top section - always visible */}
                 <div>
                   <div
-                    className={`inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-500 group-hover:bg-white/20`}
+                    className={`inline-block mb-2 sm:mb-6 px-2.5 sm:px-4 py-1 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-500 group-hover:bg-white/20`}
                   >
                     <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white/90">
                       {card.label}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 transition-all duration-500 group-hover:translate-y-0">
+                  <h3 className="font-display text-lg sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-4 transition-all duration-500 group-hover:translate-y-0">
                     {card.headline}
                   </h3>
                 </div>
@@ -153,13 +153,13 @@ export const WhoIsItForSection = () => {
                       : "opacity-0 translate-y-4 sm:translate-y-6"
                   }`}
                 >
-                  <p className="text-sm sm:text-base text-white/90 leading-relaxed line-clamp-4">
+                  <p className="text-xs sm:text-base text-white/90 leading-relaxed line-clamp-3 sm:line-clamp-4">
                     {card.copy}
                   </p>
 
                   {/* Accent line */}
                   <div
-                    className={`mt-4 sm:mt-6 h-1 w-12 bg-gradient-to-r ${card.accentColor} rounded-full`}
+                    className={`mt-3 sm:mt-6 h-1 w-12 bg-gradient-to-r ${card.accentColor} rounded-full`}
                   ></div>
                 </div>
               </div>
