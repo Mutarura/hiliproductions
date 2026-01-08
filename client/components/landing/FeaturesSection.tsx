@@ -120,14 +120,17 @@ export const FeaturesSection = () => {
               <div className="relative p-4 sm:p-6 lg:p-8 h-32 sm:h-40 lg:h-48 flex flex-col items-center justify-center text-center">
                 {/* Icon container with animation trigger */}
                 <div
-                  className={`w-10 sm:w-14 h-10 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 sm:group-hover:scale-110 transition-transform duration-300 ${
-                    activeCard === index ? `animate-${feature.animationType}` : ""
+                  className={`w-10 sm:w-14 h-10 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-2 sm:mb-4 transition-transform duration-300 ${
+                    feature.animationType === "pulse-dot" && activeCard === index
+                      ? "animate-pulse-dot"
+                      : feature.animationType === "spin-gentle" && activeCard === index
+                        ? "animate-spin-gentle"
+                        : feature.animationType === "sparkle" && activeCard === index
+                          ? "animate-sparkle"
+                          : feature.animationType === "clapper" && activeCard === index
+                            ? "animate-clapper"
+                            : "group-hover:scale-110"
                   }`}
-                  style={
-                    activeCard === index && isSmallScreen
-                      ? { animation: `${feature.animationType} var(--animation-duration) ease-in-out` }
-                      : {}
-                  }
                 >
                   <span className="text-xl sm:text-3xl">{feature.icon}</span>
                 </div>
