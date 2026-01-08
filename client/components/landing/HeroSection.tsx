@@ -35,10 +35,10 @@ export const HeroSection = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center mt-8 sm:mt-12 lg:mt-0">
+      <div className="relative z-10 max-w-5xl mx-auto px-3 sm:px-6 text-center mt-6 sm:mt-12 lg:mt-0">
         {/* Main headline */}
         <h1
-          className={`font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 transition-all duration-1000 leading-tight text-foreground ${
+          className={`font-display text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-3 sm:mb-6 transition-all duration-1000 leading-tight text-foreground ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -47,7 +47,7 @@ export const HeroSection = () => {
 
         {/* Subheading */}
         <p
-          className={`text-base sm:text-xl md:text-2xl font-semibold text-foreground max-w-3xl mx-auto mb-4 sm:mb-6 transition-all duration-1000 delay-200 px-2 ${
+          className={`text-sm sm:text-xl md:text-2xl font-semibold text-foreground max-w-3xl mx-auto mb-3 sm:mb-6 transition-all duration-1000 delay-200 px-2 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -56,7 +56,7 @@ export const HeroSection = () => {
 
         {/* Micro-tagline */}
         <p
-          className={`text-xs sm:text-sm md:text-base text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-12 transition-all duration-1000 delay-200 px-2 ${
+          className={`text-xs sm:text-sm md:text-base text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-12 transition-all duration-1000 delay-200 px-2 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
