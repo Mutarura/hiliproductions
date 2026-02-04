@@ -122,13 +122,15 @@ export const CreatorSeriesSection = () => {
         )}
 
         {/* Carousel container */}
-        <div className="relative group">
-          {/* Scroll container */}
-          <div
-            ref={scrollContainerRef}
-            className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
-          >
-            {seriesData.map((item, index) => (
+        {!isLoading && seriesData.length > 0 && (
+          <>
+            <div className="relative group">
+              {/* Scroll container */}
+              <div
+                ref={scrollContainerRef}
+                className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+              >
+                {seriesData.map((item, index) => (
               <div
                 key={item.id}
                 className={`flex-shrink-0 w-72 sm:w-80 transition-all duration-700 ${
@@ -227,29 +229,31 @@ export const CreatorSeriesSection = () => {
           )}
         </div>
 
-        {/* Indicator dots */}
-        <div className="flex justify-center gap-2 mt-8">
-          {seriesData.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                if (scrollContainerRef.current) {
-                  scrollContainerRef.current.scrollTo({
-                    left: index * 320,
-                    behavior: "smooth",
-                  });
-                  setCurrentIndex(index);
-                }
-              }}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "w-8 bg-primary"
-                  : "w-2 bg-primary/40 hover:bg-primary/60"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            ></button>
-          ))}
-        </div>
+            {/* Indicator dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {seriesData.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    if (scrollContainerRef.current) {
+                      scrollContainerRef.current.scrollTo({
+                        left: index * 320,
+                        behavior: "smooth",
+                      });
+                      setCurrentIndex(index);
+                    }
+                  }}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex
+                      ? "w-8 bg-primary"
+                      : "w-2 bg-primary/40 hover:bg-primary/60"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                ></button>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
