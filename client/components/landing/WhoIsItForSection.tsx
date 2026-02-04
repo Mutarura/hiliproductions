@@ -61,6 +61,7 @@ export const WhoIsItForSection = () => {
   return (
     <section
       ref={sectionRef}
+      id="built-for"
       className="relative py-14 sm:py-28 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden"
     >
       {/* Background gradient */}
