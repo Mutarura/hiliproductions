@@ -53,6 +53,7 @@ export const WhoWeAreSection = () => {
   return (
     <section
       ref={sectionRef}
+      id="who-we-are"
       className="relative py-16 sm:py-32 lg:py-40 px-4 sm:px-6 bg-background overflow-hidden"
     >
       {/* Multi-layered gradient background with purple, yellow, black */}
