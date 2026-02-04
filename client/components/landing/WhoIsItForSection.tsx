@@ -79,7 +79,7 @@ export const WhoIsItForSection = () => {
         >
           <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground">
             Built For Those
-            <br className="hidden sm:block" />
+            <br className="sm:hidden" />
             Shaping Culture
           </h2>
         </div>
