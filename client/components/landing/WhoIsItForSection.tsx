@@ -219,7 +219,7 @@ export const WhoIsItForSection = () => {
         {/* Optional: Subtle guidance text */}
         <div className="mt-10 sm:mt-20 text-center">
           <p className="text-xs text-muted-foreground uppercase tracking-widest">
-            <span className="sm:hidden">Tap to explore</span>
+            <span className="sm:hidden">Scroll to center cards to explore</span>
             <span className="hidden sm:inline">Hover to explore each tile</span>
           </p>
         </div>
