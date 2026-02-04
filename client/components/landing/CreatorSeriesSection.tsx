@@ -11,6 +11,18 @@ export const CreatorSeriesSection = () => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
+  // Fetch events from API
+  const { data: eventsResponse, isLoading } = useQuery({
+    queryKey: ["events"],
+    queryFn: async () => {
+      const res = await fetch("/api/events");
+      if (!res.ok) throw new Error("Failed to fetch events");
+      return res.json();
+    },
+  });
+
+  const seriesData: CreatorSeriesEvent[] = eventsResponse?.data || [];
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
