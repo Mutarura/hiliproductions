@@ -148,8 +148,8 @@ export const HeroSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="text-xs sm:text-sm text-muted-foreground">
-            Discover what's coming
+          <p className="text-xs sm:text-sm text-muted-foreground font-semibold italic">
+            Go HILI or Go Home!
           </p>
           <button
             onClick={scrollToNextSection}
