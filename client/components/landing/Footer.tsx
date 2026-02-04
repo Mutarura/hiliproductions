@@ -136,11 +136,11 @@ export const Footer = () => {
             </div>
 
             {/* Copyright and message */}
-            <div className="text-center space-y-2">
-              <p className="text-sm text-muted-foreground">
+            <div className="text-center space-y-3 pt-4">
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 © Hili Productions
               </p>
-              <p className="text-sm text-primary font-semibold">
+              <p className="text-sm sm:text-base text-primary font-semibold">
                 Something Kenyan is coming!!
               </p>
             </div>
