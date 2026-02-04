@@ -107,6 +107,20 @@ export const CreatorSeriesSection = () => {
           </p>
         </div>
 
+        {/* Loading state */}
+        {isLoading && (
+          <div className="text-center py-16 text-foreground/50">
+            Loading content...
+          </div>
+        )}
+
+        {/* Empty state */}
+        {!isLoading && seriesData.length === 0 && (
+          <div className="text-center py-16 text-foreground/50">
+            No events or series available yet.
+          </div>
+        )}
+
         {/* Carousel container */}
         <div className="relative group">
           {/* Scroll container */}
