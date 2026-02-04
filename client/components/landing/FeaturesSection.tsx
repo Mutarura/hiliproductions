@@ -23,10 +23,10 @@ const features = [
     animationType: "spin-gentle",
   },
   {
-    title: "Branded Entertainment",
+    title: "Cultural Events",
     icon: "✨",
     color: "from-secondary/20 to-primary/5",
-    sublabel: "Premium content",
+    sublabel: "Community impact",
     animationType: "sparkle",
   },
 ];
