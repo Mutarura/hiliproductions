@@ -58,7 +58,7 @@ export const Footer = () => {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 justify-center mb-8 sm:mb-20">
+        <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 justify-center mb-12 sm:mb-20">
           <a
             href="https://forms.gle/FR3gKdKcvALNUxiu5"
             target="_blank"
