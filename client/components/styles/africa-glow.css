@@ -1,0 +1,49 @@
+/* Africa glow animation */
+.africa-glow-path {
+  animation: flowingAfricaGlow 4s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+@keyframes flowingAfricaGlow {
+  0% {
+    opacity: 0.25;
+    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.3))
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
+  }
+  25% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.5))
+      drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
+  }
+  50% {
+    opacity: 0.55;
+    filter: drop-shadow(0 0 18px rgba(168, 85, 247, 0.7))
+      drop-shadow(0 0 32px rgba(168, 85, 247, 0.4))
+      drop-shadow(0 0 50px rgba(168, 85, 247, 0.2));
+  }
+  75% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.5))
+      drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
+  }
+  100% {
+    opacity: 0.25;
+    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.3))
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
+  }
+}
+
+/* Staggered animation for island details */
+.africa-glow-path:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+
+.africa-glow-path:nth-of-type(4) {
+  animation-delay: 1s;
+}
+
+/* SVG container styling */
+.africa-outline-svg {
+  opacity: 0.6;
+  mix-blend-mode: screen;
+}

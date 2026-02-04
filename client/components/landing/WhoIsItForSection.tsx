@@ -2,8 +2,20 @@ import { useEffect, useRef, useState } from "react";
 
 export const WhoIsItForSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [centeredCard, setCenteredCard] = useState<number | null>(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 640);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,6 +34,30 @@ export const WhoIsItForSection = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!isSmallScreen) return;
+
+      cardRefs.current.forEach((cardRef, index) => {
+        if (!cardRef) return;
+
+        const rect = cardRef.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+
+        // Check if card center is within 100px of viewport center
+        if (Math.abs(cardCenter - viewportCenter) < 150) {
+          setCenteredCard(index);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once on mount
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isSmallScreen]);
 
   const cards = [
     {
@@ -61,7 +97,8 @@ export const WhoIsItForSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden"
+      id="built-for"
+      className="relative py-14 sm:py-28 lg:py-32 px-4 sm:px-6 bg-background overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -72,23 +109,26 @@ export const WhoIsItForSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section title */}
         <div
-          className={`text-center mb-16 sm:mb-20 lg:mb-24 transition-all duration-1000 ${
+          className={`text-center mb-10 sm:mb-20 lg:mb-24 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground">
             Built For Those
-            <br className="hidden sm:block" />
+            <br className="sm:hidden" />
             Shaping Culture
           </h2>
         </div>
 
         {/* Cards grid - 2x2 layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 lg:gap-8">
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`group relative h-72 sm:h-80 lg:h-96 rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 transform ${
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
+              className={`group relative h-56 sm:h-80 lg:h-96 rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 transform ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -129,37 +169,41 @@ export const WhoIsItForSection = () => {
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500"></div>
 
               {/* Content */}
-              <div className="relative h-full flex flex-col justify-between p-6 sm:p-8 lg:p-10 text-white">
+              <div className="relative h-full flex flex-col justify-between p-4 sm:p-8 lg:p-10 text-white">
                 {/* Top section - always visible */}
                 <div>
                   <div
-                    className={`inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-500 group-hover:bg-white/20`}
+                    className={`inline-block mb-2 sm:mb-6 px-2.5 sm:px-4 py-1 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-500 group-hover:bg-white/20`}
                   >
                     <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white/90">
                       {card.label}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 transition-all duration-500 group-hover:translate-y-0">
+                  <h3 className="font-display text-lg sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-4 transition-all duration-500 group-hover:translate-y-0">
                     {card.headline}
                   </h3>
                 </div>
 
-                {/* Bottom section - revealed on hover */}
+                {/* Bottom section - revealed on hover (desktop) or scroll-to-center (mobile) */}
                 <div
                   className={`transition-all duration-500 transform ${
-                    hoveredCard === card.id
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4 sm:translate-y-6"
+                    isSmallScreen
+                      ? centeredCard === index
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4"
+                      : hoveredCard === card.id
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4 sm:translate-y-6"
                   }`}
                 >
-                  <p className="text-sm sm:text-base text-white/90 leading-relaxed line-clamp-4">
+                  <p className="text-xs sm:text-base text-white/90 leading-relaxed line-clamp-3 sm:line-clamp-4">
                     {card.copy}
                   </p>
 
                   {/* Accent line */}
                   <div
-                    className={`mt-4 sm:mt-6 h-1 w-12 bg-gradient-to-r ${card.accentColor} rounded-full`}
+                    className={`mt-3 sm:mt-6 h-1 w-12 bg-gradient-to-r ${card.accentColor} rounded-full`}
                   ></div>
                 </div>
               </div>
@@ -173,9 +217,10 @@ export const WhoIsItForSection = () => {
         </div>
 
         {/* Optional: Subtle guidance text */}
-        <div className="mt-16 sm:mt-20 text-center">
-          <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-widest">
-            Hover to explore <span className="hidden sm:inline">each tile</span>
+        <div className="mt-10 sm:mt-20 text-center">
+          <p className="text-xs text-muted-foreground uppercase tracking-widest">
+            <span className="sm:hidden">Scroll to center cards to explore</span>
+            <span className="hidden sm:inline">Hover to explore each tile</span>
           </p>
         </div>
       </div>

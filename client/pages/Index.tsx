@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/landing/HeroSection";
 import { WhoWeAreSection } from "@/components/landing/WhoWeAreSection";
-import { FeaturesSection } from "@/components/landing/FeaturesSection";
-import { WhoIsItForSection } from "@/components/landing/WhoIsItForSection";
+import { CreatorSeriesSection } from "@/components/landing/CreatorSeriesSection";
 import { Footer } from "@/components/landing/Footer";
 
 export default function Index() {
@@ -9,8 +8,7 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <HeroSection />
       <WhoWeAreSection />
-      <FeaturesSection />
-      <WhoIsItForSection />
+      <CreatorSeriesSection />
       <Footer />
     </div>
   );
