@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "builds": [
     {
       "src": "dist/server/node-build.mjs",
@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/server/node-build.mjs"
+      "dest": "/dist/server/node-build.mjs"
     }
   ]
 }
