@@ -1,5 +1,9 @@
 import { RequestHandler } from "express";
-import { ButtonLink, ContentListResponse, ContentItemResponse } from "@shared/api";
+import {
+  ButtonLink,
+  ContentListResponse,
+  ContentItemResponse,
+} from "@shared/api";
 
 // In-memory storage - Replace with database later
 let linksStore: ButtonLink[] = [
@@ -60,10 +64,13 @@ export const createLink: RequestHandler = (req, res) => {
   const { label, url, icon } = req.body;
 
   if (!label || !url) {
-    return res.status(400).json({ error: "Missing required fields: label, url" });
+    return res
+      .status(400)
+      .json({ error: "Missing required fields: label, url" });
   }
 
-  const maxPosition = linksStore.length > 0 ? Math.max(...linksStore.map((l) => l.position)) : 0;
+  const maxPosition =
+    linksStore.length > 0 ? Math.max(...linksStore.map((l) => l.position)) : 0;
 
   const newLink: ButtonLink = {
     id: Date.now().toString(),
@@ -128,7 +135,9 @@ export const reorderLinks: RequestHandler = (req, res) => {
   const { links } = req.body;
 
   if (!Array.isArray(links)) {
-    return res.status(400).json({ error: "Expected array of links with id and position" });
+    return res
+      .status(400)
+      .json({ error: "Expected array of links with id and position" });
   }
 
   // Update positions

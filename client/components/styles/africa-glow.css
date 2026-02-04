@@ -8,28 +8,28 @@
   0% {
     opacity: 0.25;
     filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.3))
-            drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
   }
   25% {
     opacity: 0.4;
     filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.5))
-            drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
+      drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
   }
   50% {
     opacity: 0.55;
     filter: drop-shadow(0 0 18px rgba(168, 85, 247, 0.7))
-            drop-shadow(0 0 32px rgba(168, 85, 247, 0.4))
-            drop-shadow(0 0 50px rgba(168, 85, 247, 0.2));
+      drop-shadow(0 0 32px rgba(168, 85, 247, 0.4))
+      drop-shadow(0 0 50px rgba(168, 85, 247, 0.2));
   }
   75% {
     opacity: 0.4;
     filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.5))
-            drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
+      drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
   }
   100% {
     opacity: 0.25;
     filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.3))
-            drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
   }
 }
 

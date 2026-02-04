@@ -74,8 +74,14 @@ export const FeaturesSection = () => {
     >
       {/* Animated background gradient (mobile only) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none sm:hidden">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/3 rounded-full blur-3xl animate-float" style={{ animationDuration: "8s" }}></div>
-        <div className="absolute bottom-1/4 left-0 w-56 h-56 bg-primary/3 rounded-full blur-3xl animate-float" style={{ animationDuration: "10s", animationDelay: "1s" }}></div>
+        <div
+          className="absolute top-0 right-0 w-48 h-48 bg-secondary/3 rounded-full blur-3xl animate-float"
+          style={{ animationDuration: "8s" }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 left-0 w-56 h-56 bg-primary/3 rounded-full blur-3xl animate-float"
+          style={{ animationDuration: "10s", animationDelay: "1s" }}
+        ></div>
       </div>
 
       {/* Desktop background gradient (unchanged) */}
@@ -121,13 +127,17 @@ export const FeaturesSection = () => {
                 {/* Icon container with animation trigger */}
                 <div
                   className={`w-10 sm:w-14 h-10 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-2 sm:mb-4 transition-transform duration-300 ${
-                    feature.animationType === "pulse-dot" && activeCard === index
+                    feature.animationType === "pulse-dot" &&
+                    activeCard === index
                       ? "animate-pulse-dot"
-                      : feature.animationType === "spin-gentle" && activeCard === index
+                      : feature.animationType === "spin-gentle" &&
+                          activeCard === index
                         ? "animate-spin-gentle"
-                        : feature.animationType === "sparkle" && activeCard === index
+                        : feature.animationType === "sparkle" &&
+                            activeCard === index
                           ? "animate-sparkle"
-                          : feature.animationType === "clapper" && activeCard === index
+                          : feature.animationType === "clapper" &&
+                              activeCard === index
                             ? "animate-clapper"
                             : "group-hover:scale-110"
                   }`}
@@ -165,9 +175,18 @@ export const FeaturesSection = () => {
       <div className="absolute inset-0 opacity-[0.01] mix-blend-overlay pointer-events-none sm:hidden">
         <svg width="100%" height="100%">
           <filter id="mobileNoise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" />
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.7"
+              numOctaves="3"
+            />
           </filter>
-          <rect width="100%" height="100%" filter="url(#mobileNoise)" opacity="0.05" />
+          <rect
+            width="100%"
+            height="100%"
+            filter="url(#mobileNoise)"
+            opacity="0.05"
+          />
         </svg>
       </div>
     </section>

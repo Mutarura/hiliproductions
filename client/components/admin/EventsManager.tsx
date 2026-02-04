@@ -164,7 +164,9 @@ export function EventsManager() {
   };
 
   if (isLoading) {
-    return <div className="text-center text-foreground/50">Loading events...</div>;
+    return (
+      <div className="text-center text-foreground/50">Loading events...</div>
+    );
   }
 
   return (
@@ -184,7 +186,9 @@ export function EventsManager() {
         </DialogTrigger>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>{editingId ? "Edit Event" : "Create New Event"}</DialogTitle>
+            <DialogTitle>
+              {editingId ? "Edit Event" : "Create New Event"}
+            </DialogTitle>
             <DialogDescription>
               {editingId ? "Update event details" : "Add a new event or series"}
             </DialogDescription>
@@ -197,7 +201,9 @@ export function EventsManager() {
               </label>
               <Input
                 value={formData.title}
-                onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, title: e.target.value })
+                }
                 placeholder="Event or series title"
                 required
               />
@@ -229,7 +235,9 @@ export function EventsManager() {
               </label>
               <Textarea
                 value={formData.description}
-                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, description: e.target.value })
+                }
                 placeholder="Description of the event or series"
                 required
                 rows={3}
@@ -242,7 +250,9 @@ export function EventsManager() {
               </label>
               <Input
                 value={formData.tags}
-                onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, tags: e.target.value })
+                }
                 placeholder="Live, Creator-Led, Weekly"
               />
             </div>
@@ -254,7 +264,9 @@ export function EventsManager() {
                 </label>
                 <Input
                   value={formData.icon}
-                  onChange={(e) => setFormData({ ...formData, icon: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, icon: e.target.value })
+                  }
                   placeholder="🎬"
                   maxLength={2}
                 />
@@ -265,7 +277,9 @@ export function EventsManager() {
                 </label>
                 <Input
                   value={formData.gradient}
-                  onChange={(e) => setFormData({ ...formData, gradient: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, gradient: e.target.value })
+                  }
                   placeholder="from-primary/30 to-secondary/20"
                 />
               </div>
@@ -277,7 +291,9 @@ export function EventsManager() {
               </label>
               <Input
                 value={formData.poster}
-                onChange={(e) => setFormData({ ...formData, poster: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, poster: e.target.value })
+                }
                 placeholder="https://example.com/poster.jpg"
               />
             </div>
@@ -288,7 +304,9 @@ export function EventsManager() {
               </label>
               <Input
                 value={formData.ticketUrl}
-                onChange={(e) => setFormData({ ...formData, ticketUrl: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, ticketUrl: e.target.value })
+                }
                 placeholder="https://example.com/buy-tickets"
               />
             </div>
@@ -304,7 +322,10 @@ export function EventsManager() {
               >
                 Cancel
               </Button>
-              <Button type="submit" disabled={createMutation.isPending || updateMutation.isPending}>
+              <Button
+                type="submit"
+                disabled={createMutation.isPending || updateMutation.isPending}
+              >
                 {editingId ? "Update Event" : "Create Event"}
               </Button>
             </DialogFooter>

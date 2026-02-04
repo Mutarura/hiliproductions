@@ -41,7 +41,14 @@ export const WhoWeAreSection = () => {
       delay: "2.5s",
       color: "primary",
     },
-    { id: 4, bottom: "15%", left: "10%", size: 140, delay: "1s", color: "secondary" },
+    {
+      id: 4,
+      bottom: "15%",
+      left: "10%",
+      size: 140,
+      delay: "1s",
+      color: "secondary",
+    },
   ];
 
   const featureIcons = [
@@ -95,7 +102,13 @@ export const WhoWeAreSection = () => {
                 className="drop-shadow-lg"
               >
                 <defs>
-                  <filter id={`glow-${element.id}`} x="-50%" y="-50%" width="200%" height="200%">
+                  <filter
+                    id={`glow-${element.id}`}
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
                     <feGaussianBlur stdDeviation="3" result="coloredBlur" />
                     <feMerge>
                       <feMergeNode in="coloredBlur" />
@@ -105,12 +118,16 @@ export const WhoWeAreSection = () => {
                   <radialGradient id={`gradient-${element.id}`}>
                     <stop
                       offset="0%"
-                      stopColor={element.color === "primary" ? "#a855f7" : "#ec4899"}
+                      stopColor={
+                        element.color === "primary" ? "#a855f7" : "#ec4899"
+                      }
                       stopOpacity="1"
                     />
                     <stop
                       offset="100%"
-                      stopColor={element.color === "primary" ? "#a855f7" : "#ec4899"}
+                      stopColor={
+                        element.color === "primary" ? "#a855f7" : "#ec4899"
+                      }
                       stopOpacity="0"
                     />
                   </radialGradient>
@@ -203,7 +220,9 @@ export const WhoWeAreSection = () => {
             <span className="font-semibold bg-gradient-to-r from-primary via-yellow-500 to-primary bg-clip-text text-transparent">
               live experiences, shows, and cultural moments
             </span>{" "}
-            to life across East Africa. We partner with talented creators, spotlight local voices, and turn stories into vibrant, shareable experiences that resonate with audiences everywhere.
+            to life across East Africa. We partner with talented creators,
+            spotlight local voices, and turn stories into vibrant, shareable
+            experiences that resonate with audiences everywhere.
           </p>
         </div>
 
@@ -257,9 +276,18 @@ export const WhoWeAreSection = () => {
       <div className="absolute inset-0 opacity-[0.01] mix-blend-overlay pointer-events-none">
         <svg width="100%" height="100%">
           <filter id="sectionNoise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" />
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.7"
+              numOctaves="4"
+            />
           </filter>
-          <rect width="100%" height="100%" filter="url(#sectionNoise)" opacity="0.05" />
+          <rect
+            width="100%"
+            height="100%"
+            filter="url(#sectionNoise)"
+            opacity="0.05"
+          />
         </svg>
       </div>
     </section>

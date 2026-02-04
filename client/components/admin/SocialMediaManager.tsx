@@ -39,7 +39,13 @@ const PLATFORM_ICONS: Record<string, string> = {
   linkedin: "in",
 };
 
-type Platform = "twitter" | "instagram" | "facebook" | "tiktok" | "youtube" | "linkedin";
+type Platform =
+  | "twitter"
+  | "instagram"
+  | "facebook"
+  | "tiktok"
+  | "youtube"
+  | "linkedin";
 
 export function SocialMediaManager() {
   const { toast } = useToast();
@@ -84,7 +90,10 @@ export function SocialMediaManager() {
       toast({ title: "Social media link added successfully" });
     },
     onError: (error: Error) => {
-      toast({ title: error.message || "Failed to add link", variant: "destructive" });
+      toast({
+        title: error.message || "Failed to add link",
+        variant: "destructive",
+      });
     },
   });
 
@@ -109,7 +118,10 @@ export function SocialMediaManager() {
       toast({ title: "Social media link updated successfully" });
     },
     onError: (error: Error) => {
-      toast({ title: error.message || "Failed to update link", variant: "destructive" });
+      toast({
+        title: error.message || "Failed to update link",
+        variant: "destructive",
+      });
     },
   });
 
@@ -155,13 +167,23 @@ export function SocialMediaManager() {
     }
   };
 
-  const existingPlatforms = new Set(socialLinks.map((link: SocialMediaLink) => link.platform));
+  const existingPlatforms = new Set(
+    socialLinks.map((link: SocialMediaLink) => link.platform),
+  );
   const availablePlatforms = Object.keys(PLATFORM_ICONS).filter(
-    (p) => !existingPlatforms.has(p) || (editingId && socialLinks.find((l: SocialMediaLink) => l.id === editingId)?.platform === p),
+    (p) =>
+      !existingPlatforms.has(p) ||
+      (editingId &&
+        socialLinks.find((l: SocialMediaLink) => l.id === editingId)
+          ?.platform === p),
   ) as Platform[];
 
   if (isLoading) {
-    return <div className="text-center text-foreground/50">Loading social media links...</div>;
+    return (
+      <div className="text-center text-foreground/50">
+        Loading social media links...
+      </div>
+    );
   }
 
   return (
@@ -181,9 +203,13 @@ export function SocialMediaManager() {
         </DialogTrigger>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>{editingId ? "Edit Link" : "Add Social Media Link"}</DialogTitle>
+            <DialogTitle>
+              {editingId ? "Edit Link" : "Add Social Media Link"}
+            </DialogTitle>
             <DialogDescription>
-              {editingId ? "Update social media link" : "Add a new social media profile link"}
+              {editingId
+                ? "Update social media link"
+                : "Add a new social media profile link"}
             </DialogDescription>
           </DialogHeader>
 
@@ -217,7 +243,9 @@ export function SocialMediaManager() {
               </label>
               <Input
                 value={formData.url}
-                onChange={(e) => setFormData({ ...formData, url: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, url: e.target.value })
+                }
                 placeholder="https://..."
                 type="url"
                 required
@@ -235,7 +263,10 @@ export function SocialMediaManager() {
               >
                 Cancel
               </Button>
-              <Button type="submit" disabled={createMutation.isPending || updateMutation.isPending}>
+              <Button
+                type="submit"
+                disabled={createMutation.isPending || updateMutation.isPending}
+              >
                 {editingId ? "Update Link" : "Add Link"}
               </Button>
             </DialogFooter>
@@ -262,8 +293,12 @@ export function SocialMediaManager() {
             <TableBody>
               {socialLinks.map((link: SocialMediaLink) => (
                 <TableRow key={link.id}>
-                  <TableCell className="text-xl">{PLATFORM_ICONS[link.platform]}</TableCell>
-                  <TableCell className="font-medium capitalize">{link.platform}</TableCell>
+                  <TableCell className="text-xl">
+                    {PLATFORM_ICONS[link.platform]}
+                  </TableCell>
+                  <TableCell className="font-medium capitalize">
+                    {link.platform}
+                  </TableCell>
                   <TableCell className="text-foreground/70 truncate max-w-xs">
                     <a
                       href={link.url}

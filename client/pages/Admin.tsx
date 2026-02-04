@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { EventsManager } from "@/components/admin/EventsManager";
 import { LinksManager } from "@/components/admin/LinksManager";
 import { SocialMediaManager } from "@/components/admin/SocialMediaManager";
@@ -35,7 +41,8 @@ export default function Admin() {
               <CardHeader>
                 <CardTitle>Manage Events & Series</CardTitle>
                 <CardDescription>
-                  Create, edit, and delete events and creator series. Mark events with ticket links.
+                  Create, edit, and delete events and creator series. Mark
+                  events with ticket links.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -50,7 +57,8 @@ export default function Admin() {
               <CardHeader>
                 <CardTitle>Manage Button Links</CardTitle>
                 <CardDescription>
-                  Create and manage navigation buttons and call-to-action links. Reorder as needed.
+                  Create and manage navigation buttons and call-to-action links.
+                  Reorder as needed.
                 </CardDescription>
               </CardHeader>
               <CardContent>

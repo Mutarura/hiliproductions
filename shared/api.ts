@@ -39,7 +39,13 @@ export interface ButtonLink {
 
 export interface SocialMediaLink {
   id: string;
-  platform: "twitter" | "instagram" | "facebook" | "tiktok" | "youtube" | "linkedin";
+  platform:
+    | "twitter"
+    | "instagram"
+    | "facebook"
+    | "tiktok"
+    | "youtube"
+    | "linkedin";
   url: string;
   createdAt: string;
   updatedAt: string;

@@ -1,5 +1,9 @@
 import { RequestHandler } from "express";
-import { SocialMediaLink, ContentListResponse, ContentItemResponse } from "@shared/api";
+import {
+  SocialMediaLink,
+  ContentListResponse,
+  ContentItemResponse,
+} from "@shared/api";
 
 // In-memory storage - Replace with database later
 let socialMediaStore: SocialMediaLink[] = [
@@ -53,17 +57,32 @@ export const createSocialMediaLink: RequestHandler = (req, res) => {
   const { platform, url } = req.body;
 
   if (!platform || !url) {
-    return res.status(400).json({ error: "Missing required fields: platform, url" });
+    return res
+      .status(400)
+      .json({ error: "Missing required fields: platform, url" });
   }
 
-  const validPlatforms = ["twitter", "instagram", "facebook", "tiktok", "youtube", "linkedin"];
+  const validPlatforms = [
+    "twitter",
+    "instagram",
+    "facebook",
+    "tiktok",
+    "youtube",
+    "linkedin",
+  ];
   if (!validPlatforms.includes(platform)) {
-    return res.status(400).json({ error: `Invalid platform. Must be one of: ${validPlatforms.join(", ")}` });
+    return res
+      .status(400)
+      .json({
+        error: `Invalid platform. Must be one of: ${validPlatforms.join(", ")}`,
+      });
   }
 
   // Check if platform already exists
   if (socialMediaStore.find((l) => l.platform === platform)) {
-    return res.status(400).json({ error: `Link for ${platform} already exists` });
+    return res
+      .status(400)
+      .json({ error: `Link for ${platform} already exists` });
   }
 
   const newLink: SocialMediaLink = {
@@ -94,7 +113,9 @@ export const updateSocialMediaLink: RequestHandler = (req, res) => {
   // If updating platform, check for duplicates
   if (platform && platform !== socialMediaStore[linkIndex].platform) {
     if (socialMediaStore.find((l) => l.platform === platform)) {
-      return res.status(400).json({ error: `Link for ${platform} already exists` });
+      return res
+        .status(400)
+        .json({ error: `Link for ${platform} already exists` });
     }
   }
 

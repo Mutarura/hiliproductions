@@ -135,7 +135,9 @@ export function LinksManager() {
   };
 
   if (isLoading) {
-    return <div className="text-center text-foreground/50">Loading links...</div>;
+    return (
+      <div className="text-center text-foreground/50">Loading links...</div>
+    );
   }
 
   return (
@@ -155,7 +157,9 @@ export function LinksManager() {
         </DialogTrigger>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>{editingId ? "Edit Link" : "Create New Link"}</DialogTitle>
+            <DialogTitle>
+              {editingId ? "Edit Link" : "Create New Link"}
+            </DialogTitle>
             <DialogDescription>
               {editingId ? "Update link details" : "Add a new button link"}
             </DialogDescription>
@@ -168,7 +172,9 @@ export function LinksManager() {
               </label>
               <Input
                 value={formData.label}
-                onChange={(e) => setFormData({ ...formData, label: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, label: e.target.value })
+                }
                 placeholder="Button label (e.g., Watch Live)"
                 required
               />
@@ -180,7 +186,9 @@ export function LinksManager() {
               </label>
               <Input
                 value={formData.url}
-                onChange={(e) => setFormData({ ...formData, url: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, url: e.target.value })
+                }
                 placeholder="https://example.com"
                 type="url"
                 required
@@ -193,7 +201,9 @@ export function LinksManager() {
               </label>
               <Input
                 value={formData.icon}
-                onChange={(e) => setFormData({ ...formData, icon: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, icon: e.target.value })
+                }
                 placeholder="📺"
                 maxLength={2}
               />
@@ -210,7 +220,10 @@ export function LinksManager() {
               >
                 Cancel
               </Button>
-              <Button type="submit" disabled={createMutation.isPending || updateMutation.isPending}>
+              <Button
+                type="submit"
+                disabled={createMutation.isPending || updateMutation.isPending}
+              >
                 {editingId ? "Update Link" : "Create Link"}
               </Button>
             </DialogFooter>
@@ -278,8 +291,8 @@ export function LinksManager() {
       )}
 
       <p className="text-xs text-foreground/50 mt-4">
-        Note: Drag-and-drop reordering will be implemented soon. Links are currently displayed in
-        order of creation.
+        Note: Drag-and-drop reordering will be implemented soon. Links are
+        currently displayed in order of creation.
       </p>
     </div>
   );

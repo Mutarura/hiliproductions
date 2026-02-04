@@ -1,5 +1,9 @@
 import { RequestHandler } from "express";
-import { CreatorSeriesEvent, ContentListResponse, ContentItemResponse } from "@shared/api";
+import {
+  CreatorSeriesEvent,
+  ContentListResponse,
+  ContentItemResponse,
+} from "@shared/api";
 
 // In-memory storage - Replace with database later
 let eventsStore: CreatorSeriesEvent[] = [
@@ -7,7 +11,8 @@ let eventsStore: CreatorSeriesEvent[] = [
     id: "1",
     title: "Creator Spotlight Live",
     type: "series",
-    description: "Weekly live shows featuring East Africa's most talented creators bringing stories to life.",
+    description:
+      "Weekly live shows featuring East Africa's most talented creators bringing stories to life.",
     tags: ["Live", "Creator-Led", "Weekly"],
     gradient: "from-primary/30 to-secondary/20",
     icon: "🎬",
@@ -18,7 +23,8 @@ let eventsStore: CreatorSeriesEvent[] = [
     id: "2",
     title: "Festival Live Coverage",
     type: "event",
-    description: "Real-time broadcast of major cultural festivals across East Africa with exclusive behind-the-scenes content.",
+    description:
+      "Real-time broadcast of major cultural festivals across East Africa with exclusive behind-the-scenes content.",
     tags: ["Live Event", "Cultural", "Exclusive"],
     gradient: "from-secondary/30 to-primary/20",
     icon: "🎉",
@@ -30,7 +36,8 @@ let eventsStore: CreatorSeriesEvent[] = [
     id: "3",
     title: "Music & Motion Nights",
     type: "series",
-    description: "A digital-first music and performance series celebrating African artists and emerging talent.",
+    description:
+      "A digital-first music and performance series celebrating African artists and emerging talent.",
     tags: ["Music", "Performance", "Digital"],
     gradient: "from-yellow-500/20 to-primary/20",
     icon: "🎵",
@@ -41,7 +48,8 @@ let eventsStore: CreatorSeriesEvent[] = [
     id: "4",
     title: "Community Conversations",
     type: "event",
-    description: "Intimate roundtable discussions bringing creators, community leaders, and influencers together.",
+    description:
+      "Intimate roundtable discussions bringing creators, community leaders, and influencers together.",
     tags: ["Community", "Live", "Dialogue"],
     gradient: "from-primary/25 to-yellow-500/15",
     icon: "💬",
@@ -53,7 +61,8 @@ let eventsStore: CreatorSeriesEvent[] = [
     id: "5",
     title: "Digital Arts Showcase",
     type: "series",
-    description: "Monthly exhibition of digital creations from animators, designers, and digital artists across Africa.",
+    description:
+      "Monthly exhibition of digital creations from animators, designers, and digital artists across Africa.",
     tags: ["Digital", "Arts", "Monthly"],
     gradient: "from-secondary/25 to-primary/20",
     icon: "🎨",
@@ -86,10 +95,13 @@ export const getEventById: RequestHandler = (req, res) => {
 
 // Create new event/series
 export const createEvent: RequestHandler = (req, res) => {
-  const { title, type, description, tags, gradient, icon, poster, ticketUrl } = req.body;
+  const { title, type, description, tags, gradient, icon, poster, ticketUrl } =
+    req.body;
 
   if (!title || !type || !description) {
-    return res.status(400).json({ error: "Missing required fields: title, type, description" });
+    return res
+      .status(400)
+      .json({ error: "Missing required fields: title, type, description" });
   }
 
   const newEvent: CreatorSeriesEvent = {
@@ -115,7 +127,8 @@ export const createEvent: RequestHandler = (req, res) => {
 // Update event/series
 export const updateEvent: RequestHandler = (req, res) => {
   const { id } = req.params;
-  const { title, type, description, tags, gradient, icon, poster, ticketUrl } = req.body;
+  const { title, type, description, tags, gradient, icon, poster, ticketUrl } =
+    req.body;
 
   const eventIndex = eventsStore.findIndex((e) => e.id === id);
 
@@ -138,7 +151,9 @@ export const updateEvent: RequestHandler = (req, res) => {
 
   eventsStore[eventIndex] = updatedEvent;
 
-  const response: ContentItemResponse<CreatorSeriesEvent> = { data: updatedEvent };
+  const response: ContentItemResponse<CreatorSeriesEvent> = {
+    data: updatedEvent,
+  };
   res.json(response);
 };
 
@@ -154,6 +169,8 @@ export const deleteEvent: RequestHandler = (req, res) => {
 
   const deletedEvent = eventsStore.splice(eventIndex, 1)[0];
 
-  const response: ContentItemResponse<CreatorSeriesEvent> = { data: deletedEvent };
+  const response: ContentItemResponse<CreatorSeriesEvent> = {
+    data: deletedEvent,
+  };
   res.json(response);
 };

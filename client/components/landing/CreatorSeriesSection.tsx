@@ -57,7 +57,8 @@ export const CreatorSeriesSection = () => {
     setTimeout(() => {
       setCanScrollLeft(container.scrollLeft > 0);
       setCanScrollRight(
-        container.scrollLeft < container.scrollWidth - container.clientWidth - 10,
+        container.scrollLeft <
+          container.scrollWidth - container.clientWidth - 10,
       );
     }, 300);
   };
@@ -69,7 +70,8 @@ export const CreatorSeriesSection = () => {
     const handleScroll = () => {
       setCanScrollLeft(container.scrollLeft > 0);
       setCanScrollRight(
-        container.scrollLeft < container.scrollWidth - container.clientWidth - 10,
+        container.scrollLeft <
+          container.scrollWidth - container.clientWidth - 10,
       );
     };
 
@@ -102,7 +104,8 @@ export const CreatorSeriesSection = () => {
             Creator Series & Events
           </h2>
           <p className="text-base sm:text-lg text-foreground/70 max-w-2xl">
-            Discover the live experiences, shows, and cultural moments that define HILI. From creator-led series to exclusive events.
+            Discover the live experiences, shows, and cultural moments that
+            define HILI. From creator-led series to exclusive events.
           </p>
         </div>
 
@@ -153,7 +156,9 @@ export const CreatorSeriesSection = () => {
                       <div className="relative h-full p-6 sm:p-8 flex flex-col justify-between">
                         {/* Icon and type badge */}
                         <div className="flex items-start justify-between">
-                          <div className="text-4xl sm:text-5xl">{item.icon}</div>
+                          <div className="text-4xl sm:text-5xl">
+                            {item.icon}
+                          </div>
                           <span className="px-3 py-1 bg-primary/30 backdrop-blur-sm rounded-full text-xs font-semibold text-foreground uppercase">
                             {item.type}
                           </span>
