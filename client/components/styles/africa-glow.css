@@ -1,38 +1,49 @@
-/* Africa glow animation - desktop and tablet */
-@media (min-width: 640px) {
-  .africa-path {
-    animation: flowingGlowDesktop 4s ease-in-out infinite;
-  }
+/* Africa glow animation */
+.africa-glow-path {
+  animation: flowingAfricaGlow 4s ease-in-out infinite;
+  opacity: 0.4;
 }
 
-@keyframes flowingGlowDesktop {
+@keyframes flowingAfricaGlow {
   0% {
-    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 12px rgba(168, 85, 247, 0.15));
-    opacity: 0.2;
+    opacity: 0.25;
+    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.3))
+            drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
   }
   25% {
-    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
-    opacity: 0.3;
+    opacity: 0.4;
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.5))
+            drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
   }
   50% {
-    filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 28px rgba(168, 85, 247, 0.4));
-    opacity: 0.35;
+    opacity: 0.55;
+    filter: drop-shadow(0 0 18px rgba(168, 85, 247, 0.7))
+            drop-shadow(0 0 32px rgba(168, 85, 247, 0.4))
+            drop-shadow(0 0 50px rgba(168, 85, 247, 0.2));
   }
   75% {
-    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
-    opacity: 0.3;
+    opacity: 0.4;
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.5))
+            drop-shadow(0 0 20px rgba(168, 85, 247, 0.25));
   }
   100% {
-    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 12px rgba(168, 85, 247, 0.15));
-    opacity: 0.2;
+    opacity: 0.25;
+    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.3))
+            drop-shadow(0 0 12px rgba(168, 85, 247, 0.1));
   }
 }
 
-/* Staggered animations for multiple path elements */
-.africa-path:nth-of-type(2) {
+/* Staggered animation for island details */
+.africa-glow-path:nth-of-type(3) {
   animation-delay: 0.5s;
 }
 
-.africa-path:nth-of-type(3) {
+.africa-glow-path:nth-of-type(4) {
   animation-delay: 1s;
+}
+
+/* SVG container styling */
+.africa-outline-svg {
+  opacity: 0.6;
+  mix-blend-mode: screen;
 }
