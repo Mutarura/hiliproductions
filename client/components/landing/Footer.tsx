@@ -74,7 +74,7 @@ export const Footer = () => {
             rel="noopener noreferrer"
             className="group relative px-5 sm:px-8 py-2.5 sm:py-4 border-2 border-foreground/30 text-foreground font-semibold text-xs sm:text-base rounded-lg sm:rounded-xl hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-300 hover:scale-105 active:scale-95 text-center"
           >
-            <span className="relative">Follow the journey</span>
+            <span className="relative">Be a part of the Journey</span>
           </a>
         </div>
 
