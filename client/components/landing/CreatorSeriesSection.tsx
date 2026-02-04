@@ -164,10 +164,22 @@ export const CreatorSeriesSection = () => {
                         ))}
                       </div>
 
-                      <button className="w-full py-2.5 px-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
-                        <Play size={16} />
-                        Watch Now
-                      </button>
+                      {item.type === "event" && item.ticketUrl ? (
+                        <a
+                          href={item.ticketUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full py-2.5 px-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
+                        >
+                          <Ticket size={16} />
+                          Buy Tickets
+                        </a>
+                      ) : (
+                        <button className="w-full py-2.5 px-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
+                          <Play size={16} />
+                          Watch Now
+                        </button>
+                      )}
                     </div>
                   </div>
 
