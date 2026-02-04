@@ -1,0 +1,38 @@
+/* Africa glow animation - desktop and tablet */
+@media (min-width: 640px) {
+  .africa-path {
+    animation: flowingGlowDesktop 4s ease-in-out infinite;
+  }
+}
+
+@keyframes flowingGlowDesktop {
+  0% {
+    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 12px rgba(168, 85, 247, 0.15));
+    opacity: 0.2;
+  }
+  25% {
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+    opacity: 0.3;
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 28px rgba(168, 85, 247, 0.4));
+    opacity: 0.35;
+  }
+  75% {
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+    opacity: 0.3;
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 12px rgba(168, 85, 247, 0.15));
+    opacity: 0.2;
+  }
+}
+
+/* Staggered animations for multiple path elements */
+.africa-path:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.africa-path:nth-of-type(3) {
+  animation-delay: 1s;
+}
