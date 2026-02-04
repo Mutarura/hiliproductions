@@ -125,7 +125,7 @@ export const HeroSection = () => {
           }`}
         >
           <p className="text-xs sm:text-sm text-muted-foreground font-semibold italic">
-            Go HILI or Go Home!
+            Explore the site
           </p>
           <button
             onClick={scrollToNextSection}
