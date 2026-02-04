@@ -2,8 +2,20 @@ import { useEffect, useRef, useState } from "react";
 
 export const WhoIsItForSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [centeredCard, setCenteredCard] = useState<number | null>(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 640);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,6 +34,30 @@ export const WhoIsItForSection = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!isSmallScreen) return;
+
+      cardRefs.current.forEach((cardRef, index) => {
+        if (!cardRef) return;
+
+        const rect = cardRef.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+
+        // Check if card center is within 100px of viewport center
+        if (Math.abs(cardCenter - viewportCenter) < 150) {
+          setCenteredCard(index);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once on mount
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isSmallScreen]);
 
   const cards = [
     {
@@ -89,6 +125,9 @@ export const WhoIsItForSection = () => {
           {cards.map((card, index) => (
             <div
               key={card.id}
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
               className={`group relative h-56 sm:h-80 lg:h-96 rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 transform ${
                 isVisible
                   ? "opacity-100 translate-y-0"
@@ -146,12 +185,16 @@ export const WhoIsItForSection = () => {
                   </h3>
                 </div>
 
-                {/* Bottom section - revealed on hover */}
+                {/* Bottom section - revealed on hover (desktop) or scroll-to-center (mobile) */}
                 <div
                   className={`transition-all duration-500 transform ${
-                    hoveredCard === card.id
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4 sm:translate-y-6"
+                    isSmallScreen
+                      ? centeredCard === index
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4"
+                      : hoveredCard === card.id
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4 sm:translate-y-6"
                   }`}
                 >
                   <p className="text-xs sm:text-base text-white/90 leading-relaxed line-clamp-3 sm:line-clamp-4">
