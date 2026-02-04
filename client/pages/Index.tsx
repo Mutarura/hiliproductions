@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/landing/HeroSection";
 import { WhoWeAreSection } from "@/components/landing/WhoWeAreSection";
 import { CreatorSeriesSection } from "@/components/landing/CreatorSeriesSection";
-import { WhoIsItForSection } from "@/components/landing/WhoIsItForSection";
 import { Footer } from "@/components/landing/Footer";
 
 export default function Index() {
@@ -10,7 +9,6 @@ export default function Index() {
       <HeroSection />
       <WhoWeAreSection />
       <CreatorSeriesSection />
-      <WhoIsItForSection />
       <Footer />
     </div>
   );
