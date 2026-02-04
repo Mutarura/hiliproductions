@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { HiliLogo } from "@/components/landing/HiliLogo";
+import { MobileNav } from "@/components/landing/MobileNav";
 
 export const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
