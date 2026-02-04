@@ -40,7 +40,7 @@ const TwitchIcon = (props: { className?: string }) => (
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="relative border-t border-primary/20 bg-gradient-to-b from-background via-background to-background/80 backdrop-blur-sm py-12 sm:py-28 px-4 sm:px-6 overflow-hidden">
+    <footer id="contact" className="relative border-t border-primary/20 bg-gradient-to-b from-background via-background to-background/80 backdrop-blur-sm py-16 sm:py-28 px-4 sm:px-6 overflow-hidden">
       {/* Background gradient elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
