@@ -15,7 +15,9 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background pt-4 sm:pt-8 pb-12 sm:pb-20">
+    <>
+      <MobileNav />
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background pt-4 sm:pt-8 pb-12 sm:pb-20">
       {/* Logo Header */}
       <div className="absolute top-4 sm:top-8 left-4 sm:left-8 z-50 w-16 sm:w-24 lg:w-28">
         <HiliLogo className="w-full h-auto" />
@@ -108,5 +110,6 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
