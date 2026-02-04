@@ -79,9 +79,9 @@ export const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-primary/10 pt-8 sm:pt-16">
+        <div className="border-t border-primary/10 pt-12 sm:pt-16">
           {/* Social links and info */}
-          <div className="flex flex-col items-center gap-6 sm:gap-8">
+          <div className="flex flex-col items-center gap-8 sm:gap-8">
             {/* Social icons */}
             <div className="flex gap-2.5 sm:gap-6">
               <a
