@@ -1,63 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Play } from "lucide-react";
-
-interface SeriesItem {
-  id: number;
-  title: string;
-  type: "series" | "event";
-  description: string;
-  tags: string[];
-  gradient: string;
-  icon: string;
-}
-
-const seriesData: SeriesItem[] = [
-  {
-    id: 1,
-    title: "Creator Spotlight Live",
-    type: "series",
-    description: "Weekly live shows featuring East Africa's most talented creators bringing stories to life.",
-    tags: ["Live", "Creator-Led", "Weekly"],
-    gradient: "from-primary/30 to-secondary/20",
-    icon: "🎬",
-  },
-  {
-    id: 2,
-    title: "Festival Live Coverage",
-    type: "event",
-    description: "Real-time broadcast of major cultural festivals across East Africa with exclusive behind-the-scenes content.",
-    tags: ["Live Event", "Cultural", "Exclusive"],
-    gradient: "from-secondary/30 to-primary/20",
-    icon: "🎉",
-  },
-  {
-    id: 3,
-    title: "Music & Motion Nights",
-    type: "series",
-    description: "A digital-first music and performance series celebrating African artists and emerging talent.",
-    tags: ["Music", "Performance", "Digital"],
-    gradient: "from-yellow-500/20 to-primary/20",
-    icon: "🎵",
-  },
-  {
-    id: 4,
-    title: "Community Conversations",
-    type: "event",
-    description: "Intimate roundtable discussions bringing creators, community leaders, and influencers together.",
-    tags: ["Community", "Live", "Dialogue"],
-    gradient: "from-primary/25 to-yellow-500/15",
-    icon: "💬",
-  },
-  {
-    id: 5,
-    title: "Digital Arts Showcase",
-    type: "series",
-    description: "Monthly exhibition of digital creations from animators, designers, and digital artists across Africa.",
-    tags: ["Digital", "Arts", "Monthly"],
-    gradient: "from-secondary/25 to-primary/20",
-    icon: "🎨",
-  },
-];
+import { useQuery } from "@tanstack/react-query";
+import { ChevronLeft, ChevronRight, Play, Ticket } from "lucide-react";
+import { CreatorSeriesEvent } from "@shared/api";
 
 export const CreatorSeriesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
