@@ -25,10 +25,10 @@ export const HeroSection = () => {
       </div>
       {/* Animated background gradient elements with enhanced visuals */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Africa outline with flowing glow - left side */}
+        {/* Africa outline with flowing glow - full continent */}
         <svg
-          className="africa-outline-svg absolute left-0 top-1/2 transform -translate-y-1/2 w-80 h-80 sm:w-[500px] sm:h-[500px] lg:w-[700px] lg:h-[700px] pointer-events-none"
-          viewBox="0 0 400 500"
+          className="africa-outline-svg absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-96 sm:w-[550px] sm:h-[650px] lg:w-[800px] lg:h-[900px] pointer-events-none"
+          viewBox="0 0 500 700"
           xmlns="http://www.w3.org/2000/svg"
           style={{ filter: "drop-shadow(0 0 20px rgba(168, 85, 247, 0.4))" }}
         >
@@ -39,18 +39,57 @@ export const HeroSection = () => {
               <stop offset="100%" stopColor="rgba(168, 85, 247, 0.6)" />
             </linearGradient>
           </defs>
-          {/* Eastern Africa coastline - Horn of Africa to Mozambique */}
+          {/* North Africa - Morocco to Egypt */}
           <path
             className="africa-glow-path"
-            d="M 200 50 Q 220 80 230 120 Q 240 160 235 200 L 230 240 Q 225 280 215 310 Q 205 340 190 360 Q 175 370 165 365 Q 155 355 160 320 Q 165 280 170 240 L 175 200 Q 178 160 175 120 Q 170 80 180 50 Z"
+            d="M 80 80 Q 120 70 160 75 Q 200 80 240 85 Q 280 90 320 100 L 340 110 Q 350 120 345 135 L 330 140 Q 280 135 230 130 Q 180 128 130 135 L 100 140 Z"
+            stroke="url(#africaGlow)"
+            strokeWidth="2"
+            fill="none"
+            opacity="0.5"
+          />
+          {/* West Africa coastline */}
+          <path
+            className="africa-glow-path"
+            d="M 80 140 Q 60 180 55 220 Q 50 260 60 300 Q 70 340 85 370 L 95 390 Q 100 400 110 395 L 105 360 Q 95 320 92 280 Q 90 240 95 200 Q 100 160 110 130 Z"
             stroke="url(#africaGlow)"
             strokeWidth="2.5"
             fill="none"
             opacity="0.6"
+            style={{ animationDelay: "0.3s" }}
           />
-          {/* Island details */}
-          <circle className="africa-glow-path" cx="240" cy="280" r="8" stroke="url(#africaGlow)" strokeWidth="2" fill="none" opacity="0.5" />
-          <circle className="africa-glow-path" cx="250" cy="320" r="6" stroke="url(#africaGlow)" strokeWidth="1.5" fill="none" opacity="0.4" style={{ animationDelay: "1s" }} />
+          {/* Central Africa */}
+          <path
+            className="africa-glow-path"
+            d="M 110 140 Q 180 130 240 140 Q 280 145 310 155 L 320 165 Q 315 190 290 200 Q 250 210 200 210 Q 150 208 120 200 Z"
+            stroke="url(#africaGlow)"
+            strokeWidth="2"
+            fill="none"
+            opacity="0.5"
+            style={{ animationDelay: "0.6s" }}
+          />
+          {/* East Africa - Great Rift Valley */}
+          <path
+            className="africa-glow-path"
+            d="M 320 165 Q 340 190 345 230 Q 348 270 340 310 Q 330 340 310 360 L 300 380 Q 305 390 320 385 Q 340 365 350 330 Q 360 290 365 250 Q 368 210 360 170 Z"
+            stroke="url(#africaGlow)"
+            strokeWidth="2.5"
+            fill="none"
+            opacity="0.6"
+            style={{ animationDelay: "0.9s" }}
+          />
+          {/* Southern Africa */}
+          <path
+            className="africa-glow-path"
+            d="M 120 390 Q 160 400 210 410 Q 260 415 310 410 L 320 405 Q 310 440 260 460 Q 200 475 140 465 L 110 450 Z"
+            stroke="url(#africaGlow)"
+            strokeWidth="2"
+            fill="none"
+            opacity="0.5"
+            style={{ animationDelay: "1.2s" }}
+          />
+          {/* Island details - Madagascar */}
+          <circle className="africa-glow-path" cx="380" cy="380" r="12" stroke="url(#africaGlow)" strokeWidth="2" fill="none" opacity="0.5" style={{ animationDelay: "1.5s" }} />
         </svg>
 
         {/* Primary gradient orb - smaller on mobile */}
