@@ -48,7 +48,7 @@ export const Footer = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Main statement */}
-        <div className="text-center mb-10 sm:mb-20">
+        <div className="text-center mb-12 sm:mb-20">
           <h2 className="font-display text-3xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-3 sm:mb-6">
             This is Hili.
           </h2>
