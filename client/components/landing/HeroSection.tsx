@@ -25,6 +25,58 @@ export const HeroSection = () => {
       </div>
       {/* Animated background gradient elements with enhanced visuals */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Africa outline with flowing glow - left side */}
+        <svg
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 w-96 h-96 sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] opacity-20 sm:opacity-25 pointer-events-none"
+          viewBox="0 0 800 800"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <style>
+              {`
+                .africa-path {
+                  stroke: url(#glowGradient);
+                  stroke-width: 2;
+                  fill: none;
+                  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));
+                  animation: flowingGlow 4s ease-in-out infinite;
+                }
+
+                @keyframes flowingGlow {
+                  0% {
+                    filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.3)) drop-shadow(0 0 8px rgba(168, 85, 247, 0.1));
+                    opacity: 0.15;
+                  }
+                  50% {
+                    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
+                    opacity: 0.35;
+                  }
+                  100% {
+                    filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.3)) drop-shadow(0 0 8px rgba(168, 85, 247, 0.1));
+                    opacity: 0.15;
+                  }
+                }
+              `}
+            </style>
+            <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(168, 85, 247, 0.6)" />
+              <stop offset="50%" stopColor="rgba(168, 85, 247, 0.8)" />
+              <stop offset="100%" stopColor="rgba(168, 85, 247, 0.4)" />
+            </linearGradient>
+          </defs>
+          {/* Eastern half of Africa outline - simplified for visual effect */}
+          <path
+            className="africa-path"
+            d="M 350 150 Q 380 160 400 180 L 420 200 Q 440 220 450 250 L 460 280 Q 465 310 460 340 L 450 370 Q 440 395 420 410 L 400 420 Q 380 425 360 420 L 340 410 Q 320 395 310 370 L 300 340 Q 295 310 300 280 L 310 250 Q 320 220 340 200 L 360 180 Q 370 165 350 150"
+          />
+          {/* Additional coastline detail */}
+          <path
+            className="africa-path"
+            d="M 420 200 Q 450 240 460 280 Q 465 330 450 370 Q 440 400 410 420"
+            style={{ animationDelay: "0.5s" }}
+          />
+        </svg>
+
         {/* Primary gradient orb - smaller on mobile */}
         <div className="absolute -top-24 -right-24 sm:-top-32 sm:-right-32 w-48 sm:w-96 h-48 sm:h-96 bg-primary/20 sm:bg-primary/30 rounded-full blur-3xl animate-glow-pulse"></div>
         {/* Secondary gradient orb - smaller on mobile */}
