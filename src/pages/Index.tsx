@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import PlatformsSection from "@/components/PlatformsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -22,7 +21,6 @@ const Index = () => {
       >
         <HeroSection />
         <AboutSection />
-        <PlatformsSection />
         <Footer />
       </main>
     </>
