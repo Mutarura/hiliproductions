@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,41 +6,45 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3%;
-    --foreground: 0 0% 95%;
+    --background: 20 12% 7%;
+    --foreground: 40 20% 90%;
 
-    --card: 0 0% 6%;
-    --card-foreground: 0 0% 95%;
+    --card: 20 10% 10%;
+    --card-foreground: 40 20% 90%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 20 10% 10%;
+    --popover-foreground: 40 20% 90%;
 
-    --primary: 38 100% 55%;
-    --primary-foreground: 0 0% 3%;
+    --primary: 33 80% 50%;
+    --primary-foreground: 20 12% 7%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 20 8% 15%;
+    --secondary-foreground: 40 20% 90%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 20 8% 15%;
+    --muted-foreground: 35 10% 50%;
 
-    --accent: 38 90% 50%;
-    --accent-foreground: 0 0% 3%;
+    --accent: 33 80% 50%;
+    --accent-foreground: 20 12% 7%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 38 100% 55%;
+    --border: 20 8% 18%;
+    --input: 20 8% 18%;
+    --ring: 33 80% 50%;
 
     --radius: 0.5rem;
 
     --font-display: 'Syne', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
+    --font-serif: 'Playfair Display', serif;
 
-    --glow-primary: 0 0 80px hsl(38 100% 55% / 0.15);
-    --glow-strong: 0 0 120px hsl(38 100% 55% / 0.25);
+    --glow-primary: 0 0 80px hsl(33 80% 50% / 0.15);
+    --glow-strong: 0 0 120px hsl(33 80% 50% / 0.25);
+
+    --kenyan-red: 0 70% 45%;
+    --kenyan-green: 145 60% 35%;
   }
 }
 
@@ -61,7 +65,12 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(38 100% 55%), hsl(45 100% 70%));
+    background-image: linear-gradient(135deg, hsl(33 80% 50%), hsl(40 90% 65%));
+  }
+
+  .font-serif-accent {
+    font-family: var(--font-serif);
+    font-style: italic;
   }
 
   .glow-box {
@@ -69,6 +78,27 @@
   }
 
   .glow-text {
-    text-shadow: 0 0 40px hsl(38 100% 55% / 0.3);
+    text-shadow: 0 0 40px hsl(33 80% 50% / 0.3);
+  }
+
+  .kenyan-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .kenyan-dots::before {
+    content: '';
+    width: 24px;
+    height: 4px;
+    background: hsl(0 70% 45%);
+    border-radius: 2px;
+  }
+
+  .kenyan-dots::after {
+    content: '';
+    width: 24px;
+    height: 4px;
+    background: hsl(145 60% 35%);
+    border-radius: 2px;
   }
 }
