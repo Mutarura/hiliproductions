@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import hiliLogo from "@/assets/hili-logo.png";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-      {/* Subtle radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 50% 40% at 50% 40%, hsl(38 100% 55% / 0.04), transparent)",
+            "radial-gradient(ellipse 50% 40% at 50% 40%, hsl(33 80% 50% / 0.04), transparent)",
         }}
       />
 
-      {/* Logo */}
       <motion.img
         src={hiliLogo}
         alt="Hili"
@@ -23,19 +22,17 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 0.2 }}
       />
 
-      {/* Main headline */}
       <motion.h1
-        className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-center leading-[1.05] max-w-5xl"
+        className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-center leading-[1.05] max-w-5xl uppercase tracking-wide"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
         The studio{" "}
-        <span className="text-gradient">Nairobi's creatives</span>{" "}
-        actually <span className="text-gradient">needed</span>.
+        <span className="font-serif-accent text-primary normal-case">Nairobi's creatives</span>{" "}
+        actually needed.
       </motion.h1>
 
-      {/* Subtext */}
       <motion.p
         className="mt-8 text-lg md:text-xl text-muted-foreground text-center max-w-2xl leading-relaxed font-body"
         initial={{ opacity: 0, y: 20 }}
@@ -43,24 +40,22 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 0.7 }}
       >
         A monetisation studio built from the inside out, by people that understand
-        the <span className="text-foreground font-medium">culture</span>, the
-        creators & systems that actually work.
+        the culture, the creators & systems that actually work.
       </motion.p>
 
-      {/* CTA */}
-      <motion.a
-        href="mailto:hilistreaming.co@gmail.com"
-        className="mt-12 inline-flex items-center gap-2 border border-primary/40 text-primary px-8 py-4 font-display text-sm tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-500"
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.9 }}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
       >
-        Get In Touch
-      </motion.a>
+        <Link
+          to="/contact"
+          className="mt-12 inline-flex items-center gap-2 border border-primary/40 text-primary px-8 py-4 font-display text-sm tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-500"
+        >
+          Get In Touch
+        </Link>
+      </motion.div>
 
-      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-10 flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}

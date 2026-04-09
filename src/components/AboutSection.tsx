@@ -1,24 +1,78 @@
 import { motion } from "framer-motion";
 
+const platforms = ["TWITCH", "KICK", "YOUTUBE", "INSTAGRAM", "TIKTOK", "TWITTER / X"];
+
 const AboutSection = () => {
   return (
-    <section className="relative py-32 md:py-48 px-6">
-      <div className="max-w-5xl mx-auto">
-        <motion.p
-          className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.3] text-foreground"
-          initial={{ opacity: 0, y: 60 }}
+    <section className="relative py-24 md:py-32 px-6 md:px-16 lg:px-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+        {/* Left column */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          Nairobi's creative market is{" "}
-          <span className="text-gradient">growing</span> fast. Attention is
-          everywhere but structured{" "}
-          <span className="text-gradient">systems</span> to sustain it aren't.
-          When creators & brands need{" "}
-          <span className="text-gradient">more</span>, they come to{" "}
-          <span className="text-gradient">Hili</span>.
-        </motion.p>
+          <div className="flex items-center gap-3 mb-10">
+            <div className="w-8 h-[2px] bg-primary" />
+            <span className="text-primary text-xs tracking-[0.3em] font-display uppercase font-semibold">
+              About
+            </span>
+          </div>
+
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold uppercase leading-[1.1] tracking-wide">
+            When creators & brands need more, they come to{" "}
+            <span className="font-serif-accent text-primary normal-case">Hili</span>.
+          </h2>
+
+          <div className="kenyan-dots mt-10" />
+        </motion.div>
+
+        {/* Right column */}
+        <motion.div
+          className="space-y-8 md:pt-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
+            Nairobi's creative market is growing fast.{" "}
+            <span className="text-foreground font-medium">Attention is everywhere</span>{" "}
+            — but structured systems to sustain it aren't.
+          </p>
+
+          <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
+            We sit between the talent and the money that should be reaching them.
+            Strategy, packaging, brand deals, events, and commerce infrastructure — all
+            under one studio.
+          </p>
+
+          <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
+            Built from the inside out, by people who understand the culture, the creators,
+            and the systems that actually work.
+          </p>
+
+          {/* Platforms */}
+          <div className="pt-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-[2px] bg-muted-foreground/40" />
+              <span className="text-muted-foreground text-xs tracking-[0.25em] font-display uppercase font-medium">
+                Platforms We Work Across
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {platforms.map((p) => (
+                <span
+                  key={p}
+                  className="border border-border text-foreground/70 text-xs tracking-[0.15em] font-body px-5 py-2.5 hover:border-primary/50 hover:text-primary transition-all duration-300 cursor-default"
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

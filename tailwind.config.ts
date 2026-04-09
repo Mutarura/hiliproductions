@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         display: ["Syne", "sans-serif"],
         body: ["Space Grotesk", "sans-serif"],
+        serif: ["Playfair Display", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,6 +52,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "kenyan-red": "hsl(var(--kenyan-red))",
+        "kenyan-green": "hsl(var(--kenyan-green))",
       },
       borderRadius: {
         lg: "var(--radius)",
