@@ -39,7 +39,7 @@ const Footer = () => {
           whileInView={{ opacity: 0.2 }}
           viewport={{ once: true }}
         >
-          <span className="font-display text-7xl md:text-9xl font-bold tracking-[0.2em] text-foreground/5 select-none">
+          <span className="font-display text-7xl md:text-9xl font-bold tracking-[0.2em] text-foreground/20 select-none">
             HILI
           </span>
         </motion.div>
