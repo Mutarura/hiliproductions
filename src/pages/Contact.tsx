@@ -139,8 +139,7 @@ const CreatorForm = () => {
       </div>
 
       <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8">
-        You've built the audience. Let us help you build the business around it — strategy,
-        brand deals, packaging, and infrastructure.
+        You built the audience, so we build the revenue.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -260,8 +259,7 @@ const BrandForm = () => {
       </div>
 
       <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8">
-        Looking to reach Kenya's digital-first audiences? We connect brands with creators
-        and cultural moments that move the needle.
+        Stop guessing, start converting.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
