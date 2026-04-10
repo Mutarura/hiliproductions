@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,22 +25,34 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-8">
-            <span className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors cursor-pointer">
+            <Link
+              to="/terms"
+              className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors"
+            >
               Terms Of Service
-            </span>
-            <span className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors cursor-pointer">
+            </Link>
+            <Link
+              to="/privacy"
+              className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors"
+            >
               Privacy Policy
-            </span>
+            </Link>
           </div>
         </motion.div>
 
         <motion.div
           className="mt-16 flex justify-center"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.2 }}
+          whileInView={{ opacity: 0.8 }}
           viewport={{ once: true }}
         >
-          <span className="font-display text-7xl md:text-9xl font-bold tracking-[0.2em] text-foreground/20 select-none">
+          <span
+            className="font-display text-7xl md:text-9xl font-bold tracking-[0.2em] text-primary select-none"
+            style={{
+              textShadow:
+                "0 0 40px hsl(33 80% 50% / 0.3), 0 0 80px hsl(33 80% 50% / 0.15)",
+            }}
+          >
             HILI
           </span>
         </motion.div>
