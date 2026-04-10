@@ -5,6 +5,8 @@ interface LoadingScreenProps {
   isVisible: boolean;
 }
 
+const letters = ["H", "I", "L", "I"];
+
 const LoadingScreen = ({ isVisible }: LoadingScreenProps) => {
   return (
     <AnimatePresence>
@@ -18,7 +20,7 @@ const LoadingScreen = ({ isVisible }: LoadingScreenProps) => {
           <motion.div
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="relative"
           >
             <motion.div
@@ -26,7 +28,7 @@ const LoadingScreen = ({ isVisible }: LoadingScreenProps) => {
               style={{ boxShadow: "var(--glow-strong)" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 0.6, 0.3, 0.6, 0] }}
-              transition={{ duration: 2.5, ease: "easeInOut" }}
+              transition={{ duration: 3.5, ease: "easeInOut" }}
             />
             <img
               src={hiliLogo}
@@ -35,30 +37,39 @@ const LoadingScreen = ({ isVisible }: LoadingScreenProps) => {
             />
           </motion.div>
 
-          {/* Name */}
-          <motion.h1
-            className="font-display text-4xl md:text-5xl font-bold tracking-[0.3em] text-foreground mt-8 glow-text"
-            initial={{ opacity: 0, y: 20, letterSpacing: "0.6em" }}
-            animate={{ opacity: 1, y: 0, letterSpacing: "0.3em" }}
-            transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          >
-            HILI
-          </motion.h1>
+          {/* Name - letters coming in one by one from the right */}
+          <div className="flex mt-8 overflow-hidden">
+            {letters.map((letter, i) => (
+              <motion.span
+                key={i}
+                className="font-display text-4xl md:text-5xl font-bold tracking-[0.3em] text-foreground glow-text"
+                initial={{ opacity: 0, x: 80 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 1 + i * 0.2,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </div>
 
           {/* Loading bar */}
           <motion.div
             className="mt-10 h-[1px] bg-muted overflow-hidden"
             initial={{ width: 0 }}
             animate={{ width: 120 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 2 }}
           >
             <motion.div
               className="h-full bg-primary"
               initial={{ x: "-100%" }}
               animate={{ x: "100%" }}
               transition={{
-                duration: 1,
-                delay: 1,
+                duration: 1.2,
+                delay: 2.2,
                 repeat: 1,
                 ease: "easeInOut",
               }}
