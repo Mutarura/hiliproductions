@@ -138,7 +138,7 @@ const CreatorForm = () => {
         </span>
       </div>
 
-      <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8">
+      <p className="font-serif text-xl md:text-2xl italic text-foreground/80 mb-10 leading-relaxed">
         You built the audience, so we build the revenue.
       </p>
 
@@ -258,7 +258,7 @@ const BrandForm = () => {
         </span>
       </div>
 
-      <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8">
+      <p className="font-serif text-xl md:text-2xl italic text-foreground/80 mb-10 leading-relaxed">
         Stop guessing, start converting.
       </p>
 
