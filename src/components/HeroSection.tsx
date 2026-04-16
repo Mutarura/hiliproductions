@@ -13,6 +13,58 @@ const HeroSection = () => {
         }}
       />
 
+      {/* African-inspired decorative accents */}
+      <svg
+        className="absolute top-10 left-6 md:top-16 md:left-16 w-20 h-20 md:w-32 md:h-32 text-primary/20 pointer-events-none"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <circle cx="50" cy="50" r="30" />
+        <circle cx="50" cy="50" r="18" />
+        <path d="M50 20 L50 80 M20 50 L80 50 M29 29 L71 71 M71 29 L29 71" />
+      </svg>
+
+      <svg
+        className="absolute bottom-24 right-6 md:bottom-32 md:right-16 w-24 h-24 md:w-36 md:h-36 text-primary/20 pointer-events-none"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path d="M10 50 L50 10 L90 50 L50 90 Z" />
+        <path d="M30 50 L50 30 L70 50 L50 70 Z" />
+        <circle cx="50" cy="50" r="4" fill="currentColor" />
+      </svg>
+
+      {/* Mudcloth-inspired side strips */}
+      <div className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 flex-col gap-3 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div key={i} className="flex items-center gap-1.5">
+            <div className="w-1 h-1 rounded-full bg-primary/40" />
+            <div className="w-6 h-[1px] bg-primary/30" />
+            <div className="w-1 h-1 rotate-45 bg-primary/40" />
+          </div>
+        ))}
+      </div>
+      <div className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 flex-col gap-3 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div key={i} className="flex items-center gap-1.5">
+            <div className="w-1 h-1 rotate-45 bg-primary/40" />
+            <div className="w-6 h-[1px] bg-primary/30" />
+            <div className="w-1 h-1 rounded-full bg-primary/40" />
+          </div>
+        ))}
+      </div>
+
+      {/* Top kenyan-color accent line */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex gap-2 pointer-events-none">
+        <div className="w-12 h-[2px] bg-[hsl(var(--kenyan-red))]/50" />
+        <div className="w-12 h-[2px] bg-foreground/30" />
+        <div className="w-12 h-[2px] bg-[hsl(var(--kenyan-green))]/50" />
+      </div>
+
       <motion.img
         src={hiliLogo}
         alt="Hili"
