@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 const platforms: { name: string; href?: string }[] = [
   { name: "TWITCH" },
   { name: "KICK", href: "https://kick.com/hili-streams" },
-  { name: "YOUTUBE", href: "https://youtube.com/@madebyhili?si=2TsaDKhOZdLkYNqZ" },
-  { name: "INSTAGRAM", href: "https://www.instagram.com/madebyhili/?hl=en" },
-  { name: "TIKTOK", href: "https://www.tiktok.com/@madebyhili?_r=1&_t=ZS-95aXKUcUiby" },
-  { name: "TWITTER / X", href: "https://x.com/hilistreams?s=21" },
+  { name: "YOUTUBE", href: "https://www.youtube.com/@madebyhili" },
+  { name: "INSTAGRAM", href: "https://www.instagram.com/madebyhili/" },
+  { name: "TIKTOK", href: "https://www.tiktok.com/@madebyhili" },
+  { name: "TWITTER / X", href: "https://x.com/hilistreams" },
 ];
 
 const AboutSection = () => {
