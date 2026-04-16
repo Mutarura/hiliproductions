@@ -1,14 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Twitter } from "lucide-react";
-
-const socials = [
-  { label: "Instagram", href: "https://www.instagram.com/madebyhili/?hl=en", icon: Instagram },
-  { label: "X", href: "https://x.com/hilistreams?s=21", icon: Twitter },
-  { label: "TikTok", href: "https://www.tiktok.com/@madebyhili?_r=1&_t=ZS-95aXKUcUiby", icon: null, text: "TikTok" },
-  { label: "YouTube", href: "https://youtube.com/@madebyhili?si=2TsaDKhOZdLkYNqZ", icon: Youtube },
-  { label: "Kick", href: "https://kick.com/hili-streams", icon: null, text: "Kick" },
-];
 
 const Footer = () => {
   return (
@@ -33,39 +24,19 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
-            <div className="flex items-center gap-5">
-              {socials.map(({ label, href, icon: Icon, text }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {Icon ? (
-                    <Icon className="w-4 h-4" />
-                  ) : (
-                    <span className="text-xs font-display tracking-[0.15em] uppercase">{text}</span>
-                  )}
-                </a>
-              ))}
-            </div>
-            <div className="flex gap-6">
-              <Link
-                to="/terms"
-                className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors"
-              >
-                Terms Of Service
-              </Link>
-              <Link
-                to="/privacy"
-                className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors"
-              >
-                Privacy Policy
-              </Link>
-            </div>
+          <div className="flex gap-6 md:gap-8">
+            <Link
+              to="/terms"
+              className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors"
+            >
+              Terms Of Service
+            </Link>
+            <Link
+              to="/privacy"
+              className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </motion.div>
 
