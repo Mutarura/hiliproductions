@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import hiliLogo from "@/assets/hili-logo.png";
@@ -115,19 +115,44 @@ const CreatorForm = () => {
     goals: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Creator Inquiry — Hili");
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nPlatforms: ${formData.platforms}\nAudience Size: ${formData.audience}\nGoals: ${formData.goals}\n\n${formData.message}`
-    );
-    window.location.href = `mailto:hilistreaming.co@gmail.com?subject=${subject}&body=${body}`;
+    setStatus("submitting");
+    
+    try {
+      const response = await fetch("https://formspree.io/f/xlgajype", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
+
+  if (status === "success") {
+    return (
+      <div className="py-20 text-center animate-in fade-in duration-500">
+        <h3 className="font-display text-2xl text-primary mb-4">Thank You!</h3>
+        <p className="text-muted-foreground font-body">We’ve received your submission we'll get back to you shortly</p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
@@ -142,10 +167,15 @@ const CreatorForm = () => {
         You built the audience, so we build the revenue.
       </p>
 
+      {status === "error" && (
+        <p className="text-red-500 font-body text-sm">Oops! There was a problem submitting your form.</p>
+      )}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className={labelClasses}>Name *</label>
           <input
+            name="name"
             required
             maxLength={100}
             className={inputClasses}
@@ -157,6 +187,7 @@ const CreatorForm = () => {
         <div>
           <label className={labelClasses}>Email *</label>
           <input
+            name="email"
             required
             type="email"
             maxLength={255}
@@ -172,6 +203,7 @@ const CreatorForm = () => {
         <div>
           <label className={labelClasses}>Main Platforms</label>
           <input
+            name="platforms"
             maxLength={200}
             className={inputClasses}
             placeholder="e.g. YouTube, TikTok, Kick"
@@ -182,6 +214,7 @@ const CreatorForm = () => {
         <div>
           <label className={labelClasses}>Audience Size</label>
           <input
+            name="audience"
             maxLength={100}
             className={inputClasses}
             placeholder="e.g. 50K followers"
@@ -194,6 +227,7 @@ const CreatorForm = () => {
       <div>
         <label className={labelClasses}>What are you looking for? *</label>
         <textarea
+          name="goals"
           required
           maxLength={1000}
           rows={4}
@@ -207,6 +241,7 @@ const CreatorForm = () => {
       <div>
         <label className={labelClasses}>Anything else?</label>
         <textarea
+          name="message"
           maxLength={1000}
           rows={3}
           className={`${inputClasses} resize-none`}
@@ -218,9 +253,10 @@ const CreatorForm = () => {
 
       <button
         type="submit"
-        className="mt-4 border border-primary/40 text-primary px-10 py-4 font-display text-sm tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-500"
+        disabled={status === "submitting"}
+        className="mt-4 border border-primary/40 text-primary px-10 py-4 font-display text-sm tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
@@ -235,19 +271,44 @@ const BrandForm = () => {
     goals: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Brand Partnership Inquiry — Hili");
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nCompany: ${formData.company}\nBudget: ${formData.budget}\nGoals: ${formData.goals}\n\n${formData.message}`
-    );
-    window.location.href = `mailto:hilistreaming.co@gmail.com?subject=${subject}&body=${body}`;
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("https://formspree.io/f/mbdqgvzw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
+
+  if (status === "success") {
+    return (
+      <div className="py-20 text-center animate-in fade-in duration-500">
+        <h3 className="font-display text-2xl text-primary mb-4">Thank You!</h3>
+        <p className="text-muted-foreground font-body">We’ve received your submission we'll get back to you shortly</p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
@@ -262,10 +323,15 @@ const BrandForm = () => {
         Stop guessing, start converting.
       </p>
 
+      {status === "error" && (
+        <p className="text-red-500 font-body text-sm">Oops! There was a problem submitting your form.</p>
+      )}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className={labelClasses}>Contact Name *</label>
           <input
+            name="name"
             required
             maxLength={100}
             className={inputClasses}
@@ -277,6 +343,7 @@ const BrandForm = () => {
         <div>
           <label className={labelClasses}>Email *</label>
           <input
+            name="email"
             required
             type="email"
             maxLength={255}
@@ -292,6 +359,7 @@ const BrandForm = () => {
         <div>
           <label className={labelClasses}>Company / Brand *</label>
           <input
+            name="company"
             required
             maxLength={200}
             className={inputClasses}
@@ -303,6 +371,7 @@ const BrandForm = () => {
         <div>
           <label className={labelClasses}>Budget Range</label>
           <select
+            name="budget"
             className={`${inputClasses} bg-background cursor-pointer`}
             value={formData.budget}
             onChange={(e) => handleChange("budget", e.target.value)}
@@ -319,6 +388,7 @@ const BrandForm = () => {
       <div>
         <label className={labelClasses}>What are you looking for? *</label>
         <textarea
+          name="goals"
           required
           maxLength={1000}
           rows={4}
@@ -332,6 +402,7 @@ const BrandForm = () => {
       <div>
         <label className={labelClasses}>Additional Details</label>
         <textarea
+          name="message"
           maxLength={1000}
           rows={3}
           className={`${inputClasses} resize-none`}
@@ -343,9 +414,10 @@ const BrandForm = () => {
 
       <button
         type="submit"
-        className="mt-4 border border-primary/40 text-primary px-10 py-4 font-display text-sm tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-500"
+        disabled={status === "submitting"}
+        className="mt-4 border border-primary/40 text-primary px-10 py-4 font-display text-sm tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
