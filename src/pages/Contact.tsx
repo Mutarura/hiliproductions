@@ -372,15 +372,16 @@ const BrandForm = () => {
           <label className={labelClasses}>Budget Range</label>
           <select
             name="budget"
-            className={`${inputClasses} bg-background cursor-pointer`}
+            className={`${inputClasses} cursor-pointer appearance-none bg-background`}
+            style={{ colorScheme: "dark" }}
             value={formData.budget}
             onChange={(e) => handleChange("budget", e.target.value)}
           >
-            <option value="">Select range</option>
-            <option value="Under KES 500K">Under KES 500K</option>
-            <option value="KES 500K - 1M">KES 500K – 1M</option>
-            <option value="KES 1M - 5M">KES 1M – 5M</option>
-            <option value="KES 5M+">KES 5M+</option>
+            <option value="" style={{ background: "hsl(20 10% 10%)", color: "hsl(40 20% 90%)" }}>Select range</option>
+            <option value="Under KES 500K" style={{ background: "hsl(20 10% 10%)", color: "hsl(40 20% 90%)" }}>Under KES 500K</option>
+            <option value="KES 500K - 1M" style={{ background: "hsl(20 10% 10%)", color: "hsl(40 20% 90%)" }}>KES 500K – 1M</option>
+            <option value="KES 1M - 5M" style={{ background: "hsl(20 10% 10%)", color: "hsl(40 20% 90%)" }}>KES 1M – 5M</option>
+            <option value="KES 5M+" style={{ background: "hsl(20 10% 10%)", color: "hsl(40 20% 90%)" }}>KES 5M+</option>
           </select>
         </div>
       </div>

@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 
-const platforms = ["TWITCH", "KICK", "YOUTUBE", "INSTAGRAM", "TIKTOK", "TWITTER / X"];
+const platforms: { name: string; href?: string }[] = [
+  { name: "TWITCH" },
+  { name: "KICK", href: "https://kick.com/hili-streams" },
+  { name: "YOUTUBE", href: "https://www.youtube.com/@madebyhili" },
+  { name: "INSTAGRAM", href: "https://www.instagram.com/madebyhili/" },
+  { name: "TIKTOK", href: "https://www.tiktok.com/@madebyhili" },
+  { name: "TWITTER / X", href: "https://x.com/hilistreams" },
+];
 
 const AboutSection = () => {
   return (
@@ -62,14 +69,26 @@ const AboutSection = () => {
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
-              {platforms.map((p) => (
-                <span
-                  key={p}
-                  className="border border-border text-foreground/70 text-xs tracking-[0.15em] font-body px-5 py-2.5 hover:border-primary/50 hover:text-primary transition-all duration-300 cursor-default"
-                >
-                  {p}
-                </span>
-              ))}
+              {platforms.map((p) =>
+                p.href ? (
+                  <a
+                    key={p.name}
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-border text-foreground/70 text-xs tracking-[0.15em] font-body px-5 py-2.5 hover:border-primary/50 hover:text-primary transition-all duration-300"
+                  >
+                    {p.name}
+                  </a>
+                ) : (
+                  <span
+                    key={p.name}
+                    className="border border-border text-foreground/70 text-xs tracking-[0.15em] font-body px-5 py-2.5 hover:border-primary/50 hover:text-primary transition-all duration-300 cursor-default"
+                  >
+                    {p.name}
+                  </span>
+                )
+              )}
             </div>
           </div>
         </motion.div>

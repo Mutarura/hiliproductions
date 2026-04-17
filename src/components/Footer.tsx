@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex gap-6 md:gap-8">
             <Link
               to="/terms"
               className="text-xs text-muted-foreground font-body hover:text-foreground transition-colors"
