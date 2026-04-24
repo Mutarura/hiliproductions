@@ -44,7 +44,7 @@ const AboutSection = () => {
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
-            Nairobi's creative market is growing fast.{" "}
+            Africa's creative market is growing fast.{" "}
             <span className="text-foreground font-medium">Attention is everywhere</span>{" "}
             — but structured systems to sustain it aren't.
           </p>
@@ -59,7 +59,7 @@ const AboutSection = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-[2px] bg-muted-foreground/40" />
               <span className="text-muted-foreground text-xs tracking-[0.25em] font-display uppercase font-medium">
-                Platforms We Work Across
+                Find us on
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
