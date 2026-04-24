@@ -30,7 +30,7 @@ const HeroSection = () => {
       >
         A studio{" "}
         <span className="font-serif-accent text-primary normal-case">Creativity and Community</span>{" "}
-        forged in.
+        forged in
       </motion.h1>
 
       <motion.p

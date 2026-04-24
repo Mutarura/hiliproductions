@@ -49,10 +49,8 @@ const AboutSection = () => {
             — but structured systems to sustain it aren't.
           </p>
 
-
           <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
-            Built from the inside out, by people who understand the culture, the creators,
-            and the systems that actually work.
+            Building the system that works for you.
           </p>
 
           {/* Platforms */}
