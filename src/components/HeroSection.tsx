@@ -28,9 +28,9 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
-        A studio{" "}
+        A studio forged in{" "}
         <span className="font-serif-accent text-primary normal-case">Creativity and Community</span>{" "}
-        forged in
+        
       </motion.h1>
 
       <motion.p
