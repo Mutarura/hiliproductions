@@ -28,9 +28,9 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
-        The studio{" "}
+        Where Vision{" "}
         <span className="font-serif-accent text-primary normal-case">Nairobi's creatives</span>{" "}
-        actually needed.
+        becomes output.
       </motion.h1>
 
       <motion.p
@@ -39,7 +39,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
       >
-        A monetisation studio built from the inside out, by people that understand
+        A creative studio built from the inside out, by people that understand
         the culture, the creators & systems that actually work.
       </motion.p>
 

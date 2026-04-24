@@ -28,7 +28,7 @@ const AboutSection = () => {
           </div>
 
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold uppercase leading-[1.1] tracking-wide">
-            When creators & brands need more, they come to{" "}
+            When you need more, you come to{" "}
             <span className="font-serif-accent text-primary normal-case">Hili</span>.
           </h2>
 
@@ -49,11 +49,6 @@ const AboutSection = () => {
             — but structured systems to sustain it aren't.
           </p>
 
-          <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
-            We sit between the talent and the money that should be reaching them.
-            Strategy, packaging, brand deals, events, and commerce infrastructure — all
-            under one studio.
-          </p>
 
           <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
             Built from the inside out, by people who understand the culture, the creators,
