@@ -28,9 +28,9 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
-        Where Vision{" "}
-        <span className="font-serif-accent text-primary normal-case">Nairobi's creatives</span>{" "}
-        becomes output.
+        A studio{" "}
+        <span className="font-serif-accent text-primary normal-case">Creativity and Community</span>{" "}
+        forged in.
       </motion.h1>
 
       <motion.p
