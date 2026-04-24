@@ -51,7 +51,7 @@ const AboutSection = () => {
 
           <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
             Building the system that works for {" "}
-            <span className="text-foreground font-medium">you</span>{" "} 
+            <span className="text-foreground font-medium">you.</span>{" "} 
           </p>
 
           {/* Platforms */}
