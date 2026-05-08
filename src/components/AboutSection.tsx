@@ -28,7 +28,7 @@ const AboutSection = () => {
           </div>
 
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold uppercase leading-[1.1] tracking-wide">
-            When you need more, you come to{" "}
+            When you're ready to move beyond visibilty, you come to{" "}
             <span className="font-serif-accent text-primary normal-case">Hili</span>.
           </h2>
 
@@ -44,7 +44,7 @@ const AboutSection = () => {
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
-            Africa's creative market is growing fast.{" "}
+            Africa's creative economy is our domain.{" "}
             <span className="text-foreground font-medium">Attention is everywhere</span>{" "}
             — but structured systems to sustain it aren't.
           </p>

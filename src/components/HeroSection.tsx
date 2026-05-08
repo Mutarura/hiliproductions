@@ -28,8 +28,8 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
-        A studio forged in{" "}
-        <span className="font-serif-accent text-primary normal-case">Creativity and Community</span>{" "}
+        Forged by{" "}
+        <span className="font-serif-accent text-primary normal-case">Africa's Creativity </span>{" "}
         
       </motion.h1>
 
@@ -39,8 +39,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
       >
-        A creative studio built from the inside out, by people that understand
-        the culture, the creators & systems that actually work.
+        A production partner rooted in community, dedicated to building a sustainable and scalable ecosystem for African creativity.
       </motion.p>
 
       <motion.div
