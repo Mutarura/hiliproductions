@@ -44,7 +44,9 @@ const AboutSection = () => {
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
-            Africa's creative economy is our domain.{" "}
+            Africa's creative economy is our <span className="text-foreground font-medium">domain.</span>{" "}
+            </p>
+            <p>
             <span className="text-foreground font-medium">Attention is everywhere</span>{" "}
             — but structured systems to sustain it aren't.
           </p>
