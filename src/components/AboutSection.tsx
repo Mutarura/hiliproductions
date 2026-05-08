@@ -45,7 +45,7 @@ const AboutSection = () => {
         >
           <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body">
             Africa's creative economy is our domain.
-            <span className="text-foreground font-medium">Attention is everywhere</span>{" "}
+            <span className="text-foreground font-medium"> Attention is everywhere</span>{" "}
             — but structured systems to sustain it aren't.
           </p>
 
