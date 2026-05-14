@@ -1,29 +1,35 @@
 import { motion } from "framer-motion";
 import hiliLogo from "@/assets/hili-logo.png";
+import nairobiSkyline from "@/assets/NairobiSkyline.png";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       <div
+        className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-20 pointer-events-none"
+        style={{ backgroundImage: `url(${nairobiSkyline})` }}
+      />
+      <div className="absolute inset-0 bg-background/75 pointer-events-none" />
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 50% 40% at 50% 40%, hsl(33 80% 50% / 0.04), transparent)",
+            "linear-gradient(to bottom, hsl(20 25% 5% / 0.45), hsl(20 25% 5% / 0.7)), radial-gradient(ellipse 50% 40% at 50% 40%, hsl(33 80% 50% / 0.05), transparent)",
         }}
       />
 
       <motion.img
         src={hiliLogo}
         alt="Hili"
-        className="w-20 h-20 md:w-28 md:h-28 object-contain mb-12 opacity-80"
+        className="relative z-10 w-20 h-20 md:w-28 md:h-28 object-contain mb-12 opacity-80"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 0.8, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
       />
 
       <motion.h1
-        className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-center leading-[1.05] max-w-5xl uppercase tracking-wide"
+        className="relative z-10 font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-center leading-[1.05] max-w-5xl uppercase tracking-wide"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
@@ -34,7 +40,7 @@ const HeroSection = () => {
       </motion.h1>
 
       <motion.p
-        className="mt-8 text-lg md:text-xl text-muted-foreground text-center max-w-2xl leading-relaxed font-body"
+        className="relative z-10 mt-8 text-lg md:text-xl text-muted-foreground text-center max-w-2xl leading-relaxed font-body"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
@@ -43,6 +49,7 @@ const HeroSection = () => {
       </motion.p>
 
       <motion.div
+        className="relative z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.9 }}
@@ -56,7 +63,7 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-10 flex flex-col items-center gap-2"
+        className="absolute bottom-10 z-10 flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.5 }}
         transition={{ delay: 1.5 }}
