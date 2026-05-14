@@ -7,15 +7,17 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       <div
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-20 pointer-events-none"
-        style={{ backgroundImage: `url(${nairobiSkyline})` }}
+        className="absolute inset-0 bg-cover bg-no-repeat opacity-35 pointer-events-none md:opacity-45"
+        style={{
+          backgroundImage: `url(${nairobiSkyline})`,
+          backgroundPosition: "center 55%",
+        }}
       />
-      <div className="absolute inset-0 bg-background/75 pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, hsl(20 25% 5% / 0.45), hsl(20 25% 5% / 0.7)), radial-gradient(ellipse 50% 40% at 50% 40%, hsl(33 80% 50% / 0.05), transparent)",
+            "linear-gradient(180deg, hsl(20 25% 4% / 0.72) 0%, hsl(20 25% 4% / 0.45) 34%, hsl(20 25% 4% / 0.55) 68%, hsl(20 25% 4% / 0.84) 100%), radial-gradient(ellipse 60% 42% at 50% 42%, hsl(33 80% 50% / 0.09), transparent 68%)",
         }}
       />
 
